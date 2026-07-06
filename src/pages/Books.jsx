@@ -1,18 +1,21 @@
-import { Link } from "react-router-dom";
 import books from "../data/books";
+import BookCard from "../components/books/BookCard";
 import Container from "../components/ui/Container";
+
 export default function Books() {
   return (
     <Container>
-      <section>
-        <h1>Books</h1>
+      <section className="page-header">
+        <p className="eyebrow">Books</p>
 
+        <h1>The Case Files</h1>
+
+        <p>Explore the mysteries of D.C. Dahlia.</p>
+      </section>
+
+      <section className="book-grid">
         {books.map((book) => (
-          <article key={book.id}>
-            <h2>{book.title}</h2>
-            <p>{book.genre}</p>
-            <Link to={`/books/${book.slug}`}>View Book</Link>
-          </article>
+          <BookCard key={book.id} book={book} />
         ))}
       </section>
     </Container>
