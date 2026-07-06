@@ -1,3 +1,10 @@
+import Container from "../components/ui/Container";
+
 export default function About() {
-  return <h1>About</h1>;
+  return (
+    <Container>
+      <h1>About</h1>
+      <p>Insert About the Author Page Content here.</p>
+    </Container>
+  );
 }

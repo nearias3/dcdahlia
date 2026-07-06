@@ -1,3 +1,10 @@
+import Container from "../components/ui/Container";
+
 export default function Home() {
-  return <h1>Home</h1>;
+  return (
+    <Container>
+      <h1>Home</h1>
+      <p>Welcome to the official website of D.C. Dahlia.</p>
+    </Container>
+  );
 }

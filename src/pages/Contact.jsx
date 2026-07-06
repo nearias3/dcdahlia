@@ -1,3 +1,9 @@
+import Container from "../components/ui/Container";
+
 export default function Contact() {
-  return <h1>Contact</h1>;
+  return (
+  <Container>
+    <h1>Contact</h1>;
+  </Container>
+  );
 }
