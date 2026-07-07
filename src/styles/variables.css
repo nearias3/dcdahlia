@@ -1,0 +1,24 @@
+:root {
+  --color-paper: #f8f3ec;
+  --color-paper-light: #fffaf3;
+  --color-paper-dark: #efe2c7;
+
+  --color-ink: #1f1f1f;
+  --color-muted: #666666;
+
+  --color-red: #b23a3a;
+  --color-red-dark: #7c2323;
+
+  --color-folder: #d8c6a3;
+  --color-folder-dark: #c9b18a;
+
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: Inter, system-ui, sans-serif;
+  --font-typewriter: "Courier Prime", "Courier New", monospace;
+
+  --shadow-soft: 0 12px 30px rgba(31, 31, 31, 0.08);
+  --border-soft: 1px solid rgba(31, 31, 31, 0.12);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+}

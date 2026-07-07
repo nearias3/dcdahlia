@@ -11,9 +11,9 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  font-family: system-ui, sans-serif;
-  color: #1f1f1f;
-  background: #f8f3ec;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-paper);
 }
 
 a {
@@ -118,6 +118,20 @@ a {
 
 .page-header {
   margin-bottom: 2.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  line-height: 0.95;
+}
+
+.eyebrow {
+  color: var(--color-muted);
 }
 
 .eyebrow {
@@ -247,9 +261,10 @@ a {
   font-weight: 700;
 }
 
-.button-link:hover {
-  background: #1f1f1f;
-  color: #fffaf3;
+.button-link:hover,
+button:hover {
+  background: var(--color-ink);
+  color: var(--color-paper-light);
 }
 
 .detective-board {
@@ -526,6 +541,18 @@ button:hover {
   font-weight: 700;
   text-transform: uppercase;
   opacity: 0.7;
+}
+
+.navbar,
+.footer,
+.featured-book,
+.book-card,
+.case-preview,
+.calendar-card,
+.contact-card,
+.about-content,
+.purchase-section {
+  background: var(--color-paper-light);
 }
 
 .navbar__toggle {
