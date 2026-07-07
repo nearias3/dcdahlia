@@ -249,6 +249,51 @@ a {
   border: 0;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+}
+
+.contact-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(31, 31, 31, 0.12);
+  background: #fffaf3;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(31, 31, 31, 0.2);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+button {
+  justify-self: start;
+  padding: 0.75rem 1rem;
+  border: 1px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  background: #1f1f1f;
+  color: #fffaf3;
+}
+
 @media (max-width: 700px) {
   .navbar__inner,
   .footer__inner {
@@ -266,5 +311,9 @@ a {
 
   .book-card__cover {
     min-height: 320px;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
