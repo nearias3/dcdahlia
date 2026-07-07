@@ -516,6 +516,19 @@ button:hover {
   align-items: center;
 }
 
+.not-found {
+  min-height: 50vh;
+  display: grid;
+  place-items: start;
+  align-content: center;
+  gap: 1rem;
+}
+
+.not-found h1 {
+  margin: 0;
+  font-size: clamp(4rem, 14vw, 10rem);
+}
+
 @media (max-width: 700px) {
   .footer__inner {
     flex-direction: column;
