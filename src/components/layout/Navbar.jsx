@@ -13,7 +13,20 @@ export default function Navbar() {
     <header className="navbar">
       <div className="container navbar__inner">
         <NavLink to="/" className="navbar__brand" onClick={closeMenu}>
-          {site.author.name}
+          <img
+            className="navbar__icon"
+            src={site.branding.icon}
+            alt=""
+            aria-hidden="true"
+          />
+
+          <div className="navbar__divider" />
+
+          <div className="navbar__brand-text">
+            <span className="navbar__name">{site.author.name}</span>
+
+            <span className="navbar__stories">Stories</span>
+          </div>
         </NavLink>
 
         <button
