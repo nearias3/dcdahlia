@@ -1,0 +1,16 @@
+import SuspectBoard from "./SuspectBoard";
+import EvidenceBoard from "./EvidenceBoard";
+import InvestigationTimeline from "./InvestigationTimeline";
+
+export default function CaseFile({ caseFile = {} }) {
+  return (
+    <section className="case-preview">
+      <h2>Detective Board</h2>
+      <p>Explore suspects, clues, and the unfolding timeline.</p>
+
+      <SuspectBoard suspects={caseFile.suspects || []} />
+      <EvidenceBoard evidence={caseFile.clues || []} />
+      <InvestigationTimeline timeline={caseFile.timeline || []} />
+    </section>
+  );
+}

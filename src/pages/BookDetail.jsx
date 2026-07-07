@@ -1,10 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import books from "../data/books";
 import Container from "../components/ui/Container";
-import SuspectBoard from "../components/books/casefile/SuspectBoard";
-import EvidenceBoard from "../components/books/casefile/EvidenceBoard";
-import InvestigationTimeline from "../components/books/casefile/InvestigationTimeline";
-
+import CaseFile from "../components/books/casefile/CaseFile";
 export default function BookDetail() {
   const { slug } = useParams();
   const book = books.find((book) => book.slug === slug);
@@ -85,14 +82,7 @@ export default function BookDetail() {
             !book.links.bookshop && <p>Purchase links coming soon.</p>}
         </section>
 
-        <section className="case-preview">
-          <h2>Detective Board</h2>
-          <p>Explore suspects, clues, and the unfolding timeline.</p>
-
-          <SuspectBoard suspects={book.caseFile.suspects} />
-          <EvidenceBoard evidence={book.caseFile.clues} />
-          <InvestigationTimeline timeline={book.caseFile.timeline} />
-        </section>
+        <CaseFile caseFile={book.caseFile} />
       </article>
     </Container>
   );
