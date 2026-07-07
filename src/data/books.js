@@ -15,9 +15,28 @@ const books = [
       bookshop: "",
     },
     detectiveBoard: {
-      characters: [],
-      clues: [],
-      timeline: [],
+      characters: [
+        {
+          id: 1,
+          name: "Character Name",
+          role: "Suspect",
+          description: "Character notes coming soon.",
+        },
+      ],
+      clues: [
+        {
+          id: 1,
+          title: "Clue Title",
+          description: "Clue details coming soon.",
+        },
+      ],
+      timeline: [
+        {
+          id: 1,
+          time: "Time unknown",
+          event: "Timeline event coming soon.",
+        },
+      ],
     },
   },
 ];

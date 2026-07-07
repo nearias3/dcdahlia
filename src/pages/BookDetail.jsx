@@ -1,9 +1,7 @@
-// src/pages/BookDetail.jsx
-
 import { Link, useParams } from "react-router-dom";
 import books from "../data/books";
 import Container from "../components/ui/Container";
-
+import DetectiveBoard from "../components/books/DetectiveBoard";
 export default function BookDetail() {
   const { slug } = useParams();
   const book = books.find((book) => book.slug === slug);
@@ -46,7 +44,9 @@ export default function BookDetail() {
 
         <section className="case-preview">
           <h2>Detective Board</h2>
-          <p>Suspects, clues, timelines, and case files coming soon.</p>
+          <p>Explore suspects, clues, and the unfolding timeline.</p>
+
+          <DetectiveBoard board={book.detectiveBoard} />
         </section>
       </article>
     </Container>
