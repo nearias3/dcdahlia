@@ -27,13 +27,20 @@ const books = [
       bookshop: "",
     },
 
-    detectiveBoard: {
-      characters: [
+    caseFile: {
+      suspects: [
         {
-          id: 1,
+          id: "suspect-1",
           name: "Character Name",
           role: "Suspect",
-          description: "Character notes coming soon.",
+          status: "Person of Interest",
+          age: "",
+          grade: "",
+          knownFor: "",
+          lastSeen: "",
+          alibi: "",
+          notes: "Character notes coming soon.",
+          photo: "",
         },
       ],
       clues: [

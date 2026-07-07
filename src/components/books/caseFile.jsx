@@ -1,4 +1,4 @@
-export default function DetectiveBoard({ board }) {
+export default function caseFile({ board }) {
   return (
     <section className="detective-board">
       <div className="case-section">
