@@ -1,33 +1,54 @@
-import { useParams } from "react-router-dom";
+// src/pages/BookDetail.jsx
+
+import { Link, useParams } from "react-router-dom";
 import books from "../data/books";
 import Container from "../components/ui/Container";
 
 export default function BookDetail() {
   const { slug } = useParams();
-
   const book = books.find((book) => book.slug === slug);
 
   if (!book) {
     return (
-      <section>
+      <Container>
         <h1>Book Not Found</h1>
-        <p>We couldn&apos;t find that book.</p>
-      </section>
+        <p>We couldn&apos;t find that case file.</p>
+        <Link className="button-link" to="/books">
+          Back to Books
+        </Link>
+      </Container>
     );
   }
 
   return (
     <Container>
-        <section>
-        <h1>{book.title}</h1>
-        <p>{book.genre}</p>
+      <article className="book-detail">
+        <section className="book-hero">
+          <div className="book-hero__cover">
+            {book.coverImage ? (
+              <img src={book.coverImage} alt={`${book.title} book cover`} />
+            ) : (
+              <span>Cover Coming Soon</span>
+            )}
+          </div>
 
-        <h2>Synopsis</h2>
-        <p>{book.synopsis || "Synopsis coming soon."}</p>
+          <div className="book-hero__content">
+            <p className="eyebrow">Case File</p>
+            <h1>{book.title}</h1>
+            <p>{book.genre}</p>
+            <p>{book.synopsis || "Synopsis coming soon."}</p>
 
-        <h2>Detective Board</h2>
-        <p>Characters, clues, and case files coming soon.</p>
+            <Link className="button-link" to="/books">
+              Back to Books
+            </Link>
+          </div>
         </section>
+
+        <section className="case-preview">
+          <h2>Detective Board</h2>
+          <p>Suspects, clues, timelines, and case files coming soon.</p>
+        </section>
+      </article>
     </Container>
   );
 }
