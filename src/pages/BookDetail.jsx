@@ -1,7 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import books from "../data/books";
 import Container from "../components/ui/Container";
-import CaseFile from "../components/books/casefile/CaseFile";
+import CaseFile from "../components/books/casefile/CaseFile";import BookHero from "../components/books/BookHero";
+
 export default function BookDetail() {
   const { slug } = useParams();
   const book = books.find((book) => book.slug === slug);
@@ -21,41 +22,7 @@ export default function BookDetail() {
   return (
     <Container>
       <article className="book-detail">
-        <section className="book-hero">
-          <div className="book-hero__cover">
-            {book.media.coverImage ? (
-              <img
-                src={book.media.coverImage}
-                alt={`${book.metadata.title} book cover`}
-              />
-            ) : (
-              <span>Cover Coming Soon</span>
-            )}
-          </div>
-
-          <div className="book-hero__content">
-            <p className="eyebrow">Case File</p>
-            <h1>{book.metadata.title}</h1>
-            <p>{book.metadata.genre}</p>
-            <p>{book.descriptions.long || "Synopsis coming soon."}</p>
-
-            <div className="book-meta-list">
-              <p>
-                <strong>Genre:</strong> {book.metadata.genre}
-              </p>
-              <p>
-                <strong>Release:</strong> {book.metadata.releaseDate}
-              </p>
-              <p>
-                <strong>Series:</strong> {book.metadata.series || "Standalone"}
-              </p>
-            </div>
-
-            <Link className="button-link" to="/books">
-              Back to Books
-            </Link>
-          </div>
-        </section>
+        <BookHero book={book} />
 
         <section className="purchase-section">
           <h2>Get the Book</h2>
