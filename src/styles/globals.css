@@ -320,6 +320,29 @@ button:hover {
   margin-top: 0;
 }
 
+.book-meta-list {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-left: 4px solid #1f1f1f;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.book-meta-list p {
+  margin: 0.35rem 0;
+}
+
+.purchase-section {
+  padding: 1.5rem;
+  border: 1px solid rgba(31, 31, 31, 0.12);
+  background: #fffaf3;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 @media (max-width: 700px) {
   .navbar__inner,
   .footer__inner {

@@ -23,8 +23,11 @@ export default function BookDetail() {
       <article className="book-detail">
         <section className="book-hero">
           <div className="book-hero__cover">
-            {book.coverImage ? (
-              <img src={book.coverImage} alt={`${book.title} book cover`} />
+            {book.media.coverImage ? (
+              <img
+                src={book.media.coverImage}
+                alt={`${book.metadata.title} book cover`}
+              />
             ) : (
               <span>Cover Coming Soon</span>
             )}
@@ -32,14 +35,51 @@ export default function BookDetail() {
 
           <div className="book-hero__content">
             <p className="eyebrow">Case File</p>
-            <h1>{book.title}</h1>
-            <p>{book.genre}</p>
-            <p>{book.synopsis || "Synopsis coming soon."}</p>
+            <h1>{book.metadata.title}</h1>
+            <p>{book.metadata.genre}</p>
+            <p>{book.descriptions.long || "Synopsis coming soon."}</p>
+
+            <div className="book-meta-list">
+              <p>
+                <strong>Genre:</strong> {book.metadata.genre}
+              </p>
+              <p>
+                <strong>Release:</strong> {book.metadata.releaseDate}
+              </p>
+              <p>
+                <strong>Series:</strong> {book.metadata.series || "Standalone"}
+              </p>
+            </div>
 
             <Link className="button-link" to="/books">
               Back to Books
             </Link>
           </div>
+        </section>
+
+        <section className="purchase-section">
+          <h2>Get the Book</h2>
+          <div className="button-row">
+            {book.links.amazon && (
+              <a className="button-link" href={book.links.amazon}>
+                Amazon
+              </a>
+            )}
+            {book.links.barnesAndNoble && (
+              <a className="button-link" href={book.links.barnesAndNoble}>
+                Barnes & Noble
+              </a>
+            )}
+            {book.links.bookshop && (
+              <a className="button-link" href={book.links.bookshop}>
+                Bookshop
+              </a>
+            )}
+          </div>
+
+          {!book.links.amazon &&
+            !book.links.barnesAndNoble &&
+            !book.links.bookshop && <p>Purchase links coming soon.</p>}
         </section>
 
         <section className="case-preview">
