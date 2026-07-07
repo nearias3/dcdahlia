@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import books from "../data/books";
 import Container from "../components/ui/Container";
 import CaseFile from "../components/books/casefile/CaseFile";import BookHero from "../components/books/BookHero";
-
+import PurchaseLinks from "../components/books/PurchaseLinks";
 export default function BookDetail() {
   const { slug } = useParams();
   const book = books.find((book) => book.slug === slug);
@@ -23,32 +23,7 @@ export default function BookDetail() {
     <Container>
       <article className="book-detail">
         <BookHero book={book} />
-
-        <section className="purchase-section">
-          <h2>Get the Book</h2>
-          <div className="button-row">
-            {book.links.amazon && (
-              <a className="button-link" href={book.links.amazon}>
-                Amazon
-              </a>
-            )}
-            {book.links.barnesAndNoble && (
-              <a className="button-link" href={book.links.barnesAndNoble}>
-                Barnes & Noble
-              </a>
-            )}
-            {book.links.bookshop && (
-              <a className="button-link" href={book.links.bookshop}>
-                Bookshop
-              </a>
-            )}
-          </div>
-
-          {!book.links.amazon &&
-            !book.links.barnesAndNoble &&
-            !book.links.bookshop && <p>Purchase links coming soon.</p>}
-        </section>
-
+        <PurchaseLinks links={book.links} />
         <CaseFile caseFile={book.caseFile} />
       </article>
     </Container>
