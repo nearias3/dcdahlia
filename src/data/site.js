@@ -8,6 +8,8 @@ const site = {
     substack: "",
     shortBio:
       "D.C. Dahlia writes twisty mysteries filled with secrets, suspects, and stories that keep readers guessing until the end.",
+    newsletterText:
+      "Get updates about new releases, events, bonus content, and more.",
   },
 
   branding: {
