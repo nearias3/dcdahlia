@@ -704,6 +704,26 @@ button:hover {
   line-height: 1;
 }
 
+.event-preview-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.event-preview-card {
+  padding: 1rem;
+  border-left: 4px solid var(--color-red);
+  background: var(--color-paper);
+}
+
+.event-preview-card p,
+.event-preview-card h3 {
+  margin: 0;
+}
+
+.event-preview-card h3 {
+  margin-top: 0.25rem;
+}
 
 @media (max-width: 700px) {
   .footer__inner {

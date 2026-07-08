@@ -15,6 +15,15 @@ const site = {
     logoWhite: "/images/author/dcdahlialogowhite.jpeg",
     icon: "/images/author/winelogo.png",
   },
+
+  events: [
+    {
+      id: 1,
+      title: "Upcoming event",
+      date: "Coming soon",
+      location: "Location TBA",
+    },
+  ],
 };
 
 export default site;

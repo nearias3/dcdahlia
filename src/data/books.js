@@ -22,8 +22,10 @@ const books = [
     },
 
     links: {
-      amazon: "",
-      barnesAndNoble: "",
+      amazon:
+        "https://www.amazon.com/dp/B0DPY3GYWN?ref=cm_sw_r_ffobk_cso_cp_apin_dp_SAPF6PNE1X746ZGN8ZJ7&ref_=cm_sw_r_ffobk_cso_cp_apin_dp_SAPF6PNE1X746ZGN8ZJ7&social_share=cm_sw_r_ffobk_cso_cp_apin_dp_SAPF6PNE1X746ZGN8ZJ7&peakEvent=5&starsLeft=1&skipTwisterOG=1&bestFormat=true&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnyowRr4HfbZVp27I3gmGyS1oB6vHVihp3diNJrOx8d9akE9zlz-jakKYEDoM_aem_hLgPiAMSe4HQ35jwIXF25A&utm_content=link_in_bio&utm_medium=social&utm_source=ig",
+      barnesAndNoble:
+        "https://www.barnesandnoble.com/w/a-killer-time-d-c-dahlia/1146662245?ean=9798893084184&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnsFZ2EoHaeZL2WbPd4CnIA51ogwDHpcG4in7C4kKXmuCrgx1JizQ3Nd01yVU_aem_sFawYY_YyWlC8bevyHqqkg",
       bookshop: "",
     },
 
