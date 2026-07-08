@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Container from "../components/ui/Container";
 import books from "../data/books";
 import site from "../data/site";
+import ReviewsPreview from "../components/home/ReviewsPreview";
 
 export default function Home() {
   const featuredBook = books[0];
@@ -18,9 +19,7 @@ export default function Home() {
 
           <p className="eyebrow">Official Author Website</p>
 
-<p className="hero-tagline">
-  Mysteries worth losing sleep over.
-</p>
+          <p className="hero-tagline">Mysteries worth losing sleep over.</p>
 
           <div className="button-row">
             <Link className="button-link" to="/books">
@@ -55,6 +54,9 @@ export default function Home() {
           )}
         </div>
       </section>
+
+      <ReviewsPreview reviews={featuredBook.reviews} />
+      
     </Container>
   );
 }

@@ -27,6 +27,24 @@ const books = [
       bookshop: "",
     },
 
+    reviews: [
+      {
+        id: 1,
+        quote: "The murder mystery you've waited for",
+        source: "Reader Review",
+      },
+      {
+        id: 2,
+        quote: "Couldn't put it down.",
+        source: "Reader review",
+      },
+      {
+        id: 3,
+        quote: "Breakfast club meets muder mystery",
+        source: "Reader Review",
+      },
+    ],
+
     caseFile: {
       suspects: [
         {
