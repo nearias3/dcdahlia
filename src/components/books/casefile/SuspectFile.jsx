@@ -14,7 +14,11 @@ export default function SuspectFile({ suspect }) {
       <div className="suspect-file__details">
         <p className="eyebrow">Suspect File</p>
         <h3>{suspect.name}</h3>
-        <p className="status-stamp">{suspect.status}</p>
+        <p
+          className={`status-stamp status-stamp--${suspect.role.toLowerCase()}`}
+        >
+          {suspect.status}
+        </p>
 
         <dl className="suspect-details-list">
           <div>
@@ -41,12 +45,12 @@ export default function SuspectFile({ suspect }) {
         </div>
         {suspect.playlistLink && (
           <a
-            className="button-link"
+            className="button-link playlist-link"
             href={suspect.playlistLink}
             target="_blank"
             rel="noreferrer"
           >
-            A Killer Playlist
+            Listen to {suspect.name}&apos;s Killer Playlist
           </a>
         )}
       </div>

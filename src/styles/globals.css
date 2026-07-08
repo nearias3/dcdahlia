@@ -353,6 +353,27 @@ h1 {
   border-radius: 0 0 var(--radius-md) var(--radius-md);
 }
 
+.playlist-link {
+  margin-top: 1rem;
+  border-color: var(--color-red);
+  color: var(--color-red-dark);
+}
+
+.playlist-link:hover {
+  background: var(--color-red-dark);
+  color: var(--color-paper-light);
+}
+
+.status-stamp--victim {
+  border-color: #1f1f1f;
+  color: #1f1f1f;
+}
+
+.status-stamp--suspect {
+  border-color: var(--color-red);
+  color: var(--color-red-dark);
+}
+
 .button-link {
   display: inline-block;
   margin-top: 0.75rem;
