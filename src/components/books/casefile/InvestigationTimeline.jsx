@@ -5,7 +5,8 @@ export default function InvestigationTimeline({ timeline = [] }) {
 
   return (
     <section className="case-section">
-      <h3>Investigation Timeline</h3>
+      <p className="eyebrow">Timeline</p>
+      <h3>Investigation Notes</h3>
 
       <ol className="investigation-timeline">
         {timeline.map((item) => (

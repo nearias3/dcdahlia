@@ -748,22 +748,36 @@ button:hover {
 
 .investigation-timeline {
   margin: 0;
-  padding-left: 1.5rem;
+  padding: 0;
+  list-style: none;
+  border-left: 3px solid var(--color-red);
 }
 
 .investigation-timeline li {
-  padding: 0.75rem 0;
+  position: relative;
+  padding: 0 0 1.5rem 1.5rem;
 }
 
-.investigation-timeline li + li {
-  border-top: 1px solid rgba(31, 31, 31, 0.12);
+.investigation-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -0.55rem;
+  top: 0.15rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 999px;
+  background: var(--color-red);
 }
 
 .timeline-time {
   display: block;
+  font-family: var(--font-typewriter);
   font-weight: 700;
   text-transform: uppercase;
-  opacity: 0.7;
+}
+
+.investigation-timeline p {
+  margin: 0.25rem 0 0;
 }
 
 .navbar,

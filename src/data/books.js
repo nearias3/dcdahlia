@@ -187,31 +187,45 @@ const books = [
       ],
 
       clues: [
-      {
-        id: 1,
-        type: "Evidence",
-        title: "Missing Murder Weapon",
-        description: "The weapon used to kill Roy Wilson has not been recovered.",
-      },
-      {
-        id: 2,
-        type: "Witness Statement",
-        title: "Last Seen Alive",
-        description: "Skyler Hartley was reportedly the last person to see Roy alive.",
-      },
-      {
-        id: 3,
-        type: "Motive",
-        title: "Relationship Trouble",
-        description: "Multiple suspects had romantic or personal conflicts with Roy.",
-      },
+        {
+          id: 1,
+          type: "Evidence",
+          title: "Missing Murder Weapon",
+          description:
+            "The weapon used to kill Roy Wilson has not been recovered.",
+        },
+        {
+          id: 2,
+          type: "Witness Statement",
+          title: "Last Seen Alive",
+          description:
+            "Skyler Hartley was reportedly the last person to see Roy alive.",
+        },
+        {
+          id: 3,
+          type: "Motive",
+          title: "Relationship Trouble",
+          description:
+            "Multiple suspects had romantic or personal conflicts with Roy.",
+        },
       ],
-      
+
       timeline: [
         {
           id: 1,
-          time: "Time unknown",
-          event: "Timeline event coming soon.",
+          time: "Case Opened",
+          event: "Roy Wilson is found dead, launching the investigation.",
+        },
+        {
+          id: 2,
+          time: "Initial Interviews",
+          event:
+            "Students connected to Roy are questioned as persons of interest.",
+        },
+        {
+          id: 3,
+          time: "Evidence Review",
+          event: "Clues begin to point toward more than one possible motive.",
         },
       ],
     },
