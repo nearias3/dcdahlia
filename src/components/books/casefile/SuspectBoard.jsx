@@ -23,7 +23,8 @@ export default function SuspectBoard({ suspects = [] }) {
             }`}
             onClick={() => setActiveSuspectId(suspect.id)}
           >
-            {suspect.name}
+            <span>{suspect.name}</span>
+            <small>{suspect.role}</small>
           </button>
         ))}
       </div>
