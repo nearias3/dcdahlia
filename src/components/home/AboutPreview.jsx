@@ -7,9 +7,7 @@ export default function AboutPreview() {
       <div>
         <p className="eyebrow">Meet the Author</p>
         <h2>{site.author.name}</h2>
-        <p>
-          Author biography preview coming soon.
-        </p>
+        <p>{site.author.shortBio}</p>
 
         <Link className="button-link" to="/about">
           Read More

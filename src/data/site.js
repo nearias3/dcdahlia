@@ -1,11 +1,13 @@
 const site = {
   author: {
     name: "D.C. Dahlia",
-    tagline: "Mystery author",
+    tagline: "Mysteries worth losing sleep over.",
     email: "",
-    instagram: "",
+    instagram: "https://www.instagram.com/dcdahliastories/",
     facebook: "",
     substack: "",
+    shortBio:
+      "D.C. Dahlia writes twisty mysteries filled with secrets, suspects, and stories that keep readers guessing until the end.",
   },
 
   branding: {
