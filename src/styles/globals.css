@@ -309,10 +309,48 @@ h1 {
   object-fit: cover;
 }
 
-.case-preview {
-  padding: 1.5rem;
-  border: 1px solid rgba(31, 31, 31, 0.12);
-  background: #fffaf3;
+.case-file {
+  padding: 2rem;
+  border: var(--border-soft);
+  background: var(--color-paper-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.case-file__header {
+  margin-bottom: 2rem;
+}
+
+.case-file__header h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.case-file__content {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.folder-tab {
+  padding: 0.85rem 1.5rem;
+  border: 1px solid rgba(31, 31, 31, 0.2);
+  border-bottom: 0;
+  background: var(--color-folder-dark);
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 14px 14px 0 0;
+}
+
+.folder-tab.active {
+  background: var(--color-folder);
+}
+
+.folder-body {
+  padding: 2rem;
+  border: 1px solid rgba(31, 31, 31, 0.2);
+  background: var(--color-folder);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
 }
 
 .button-link {
