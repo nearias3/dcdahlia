@@ -188,24 +188,47 @@ h1 {
   grid-template-columns: 1fr 260px;
   gap: 2rem;
   align-items: center;
-  padding: 1.5rem;
-  border: 1px solid rgba(31, 31, 31, 0.12);
-  background: #fffaf3;
+  padding: 2rem;
+  border: var(--border-soft);
+  background: var(--color-paper-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.featured-book h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.featured-book p {
+  max-width: 65ch;
 }
 
 .featured-book__cover {
   min-height: 380px;
   display: grid;
   place-items: center;
-  border: 1px dashed rgba(31, 31, 31, 0.25);
-  background: rgba(255, 255, 255, 0.55);
+  border: var(--border-soft);
+  background: var(--color-paper);
   text-align: center;
+  box-shadow: 0 16px 35px rgba(31, 31, 31, 0.18);
 }
 
 .featured-book__cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.featured-book .button-link {
+  border-color: var(--color-red);
+  color: var(--color-red-dark);
+}
+
+.featured-book .button-link:hover {
+  background: var(--color-red-dark);
+  color: var(--color-paper-light);
 }
 
 .book-grid {
