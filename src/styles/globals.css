@@ -144,11 +144,26 @@ h1 {
 }
 
 .home-hero {
-  padding: 4rem 0;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  background: var(--color-ink);
+  color: var(--color-paper-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.home-logo {
+  display: block;
+  width: clamp(500px, 65vw, 700px);
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 2rem;
 }
 
 .home-hero__content {
-  max-width: 720px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .home-hero h1 {
@@ -156,6 +171,16 @@ h1 {
   margin: 0;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.home-hero .button-link {
+  color: var(--color-paper-light);
+  border-color: var(--color-paper-light);
+}
+
+.home-hero .button-link:hover {
+  background: var(--color-paper-light);
+  color: var(--color-ink);
 }
 
 .featured-book {
@@ -416,8 +441,9 @@ button:hover {
 
 .button-row {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .suspect-board {

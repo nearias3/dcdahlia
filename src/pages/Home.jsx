@@ -10,9 +10,17 @@ export default function Home() {
     <Container>
       <section className="home-hero">
         <div className="home-hero__content">
+          <img
+            className="home-logo"
+            src={site.branding.logo}
+            alt={`${site.author.name} logo`}
+          />
+
           <p className="eyebrow">Official Author Website</p>
-          <h1>{site.author.name}</h1>
-          <p>{site.author.tagline}</p>
+
+<p className="hero-tagline">
+  Mysteries worth losing sleep over.
+</p>
 
           <div className="button-row">
             <Link className="button-link" to="/books">
