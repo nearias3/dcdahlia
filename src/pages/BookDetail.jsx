@@ -1,7 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import books from "../data/books";
 import Container from "../components/ui/Container";
-import CaseFile from "../components/books/casefile/CaseFile";import BookHero from "../components/books/BookHero";
+import CaseFile from "../components/books/casefile/CaseFile";
+import BookHero from "../components/books/BookHero";
 import PurchaseLinks from "../components/books/PurchaseLinks";
 export default function BookDetail() {
   const { slug } = useParams();

@@ -22,7 +22,7 @@ export default function BookCard({ book }) {
         <p>{book.descriptions.short || "Book details coming soon."}</p>
 
         <Link className="button-link" to={`/books/${book.slug}`}>
-          View Case File
+          Open Case File
         </Link>
       </div>
     </article>
