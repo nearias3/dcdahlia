@@ -687,6 +687,23 @@ button:hover {
   font-size: 0.9rem;
 }
 
+.home-section,
+.newsletter-cta {
+  margin-top: 3rem;
+  padding: 2rem;
+  border: var(--border-soft);
+  background: var(--color-paper-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.home-section h2,
+.newsletter-cta h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1;
+}
+
 
 @media (max-width: 700px) {
   .footer__inner {
