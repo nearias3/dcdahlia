@@ -26,16 +26,8 @@ export default function SuspectFile({ suspect }) {
             <dd>{suspect.age || "Unknown"}</dd>
           </div>
           <div>
-            <dt>Grade</dt>
-            <dd>{suspect.grade || "Unknown"}</dd>
-          </div>
-          <div>
-            <dt>Known For</dt>
-            <dd>{suspect.knownFor || "Unknown"}</dd>
-          </div>
-          <div>
-            <dt>Last Seen</dt>
-            <dd>{suspect.lastSeen || "Unknown"}</dd>
+            <dt>Known As</dt>
+            <dd>{suspect.knownAs || "Unknown"}</dd>
           </div>
           <div>
             <dt>Alibi</dt>
@@ -47,6 +39,16 @@ export default function SuspectFile({ suspect }) {
           <h4>Notes</h4>
           <p>{suspect.notes}</p>
         </div>
+        {suspect.playlistLink && (
+          <a
+            className="button-link"
+            href={suspect.playlistLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            A Killer Playlist
+          </a>
+        )}
       </div>
     </article>
   );

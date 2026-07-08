@@ -599,6 +599,7 @@ button:hover {
   gap: 0.25rem;
   overflow-x: auto;
   padding-left: 1rem;
+  padding-bottom: 0;
 }
 
 .folder-tab {

@@ -50,19 +50,142 @@ const books = [
     caseFile: {
       suspects: [
         {
-          id: "suspect-1",
-          name: "Character Name",
+          id: "roy-wilson",
+          name: "Roy Wilson",
+          role: "Victim",
+          status: "Victim",
+          age: "17 years old",
+          knownAs: "Wrenford's Resident PLAYER",
+          alibi: "N/A",
+          notes:
+            "Caucasian Male. Athlete. Bludgeoned to death. Murder weapon missing.",
+          photo: "",
+          playlistLink: "",
+        },
+        {
+          id: "skyler-hartley",
+          name: "Skyler Hartley",
+          role: "Suspect",
+          status: "Person of Interest",
+          age: "16",
+          knownAs: "Wrenford's Resident REBEL",
+          alibi: "",
+          notes:
+            "Ex-girlfriend of victim's brother. Sent to headmaster's office more than anyone in her class. Best friends with Penny - very protective of her. LAST TO SEE VICTIM ALIVE.",
+          photo: "",
+          playlistLink:
+            "https://open.spotify.com/playlist/1mHhO7q83KgJ0ILGhDp7oS?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=fe62596409714c3c",
+        },
+        {
+          id: "drew-morrison",
+          name: "Drew Morrison",
+          role: "Suspect",
+          status: "Person of Interest",
+          age: "16",
+          knownAs: "Wrenford's Resident BAD BOY",
+          alibi: "",
+          notes:
+            "Richest student at Wrenford. Reputation for breaking the rules. HATES victim.",
+          photo: "",
+          playlistLink:
+            "https://open.spotify.com/playlist/5q3dbEVauNYy3DEToGnXnw?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+        },
+        {
+          id: "penny-paulson",
+          name: "Penny Paulson",
+          role: "Suspect",
+          status: "Person of Interest",
+          age: "16",
+          knownAs: "Wrenford's Resident SLUT",
+          alibi: "",
+          notes:
+            "Having affair with victim. Close friends with Skylar and Drew. Conquest well known. Angry victim wouldn't leave girlfriend for her?",
+          photo: "",
+          playlistLink:
+            "https://open.spotify.com/playlist/2I5lusekzfJQIfhMjSbCIW?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+        },
+        {
+          id: "henry-parker",
+          name: "Henry Parker",
+          role: "Suspect",
+          status: "Person of Interest",
+          age: "17",
+          knownAs: "Wrenford's Resident GOLDEN BOY",
+          alibi: "",
+          notes:
+            "Victim's best friend. Popular athlete. Dating victim's sister. Victim possibly disapproved?",
+          photo: "",
+          playlistLink:
+            "https://open.spotify.com/playlist/2PfrQVBfZcpRXKaCn2FYW9?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+        },
+        {
+          id: "hailee-gruber",
+          name: "Hailee Gruber",
+          role: "Suspect",
+          status: "Person of Interest",
+          age: "17",
+          knownAs: "Wrenford's Resident KNOW-IT-ALL",
+          alibi: "",
+          notes:
+            "Victim's official girlfriend. Valedictorian. Co-president of the Physics, Chess, and Mathematics Club. Knew victim was cheating on her?",
+          photo: "",
+          playlistLink:
+            "https://open.spotify.com/playlist/6UIkT76nuvzlRG3bSkVP1Y?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+        },
+        {
+          id: "nolan-lott",
+          name: "Nolan Lott",
           role: "Suspect",
           status: "Person of Interest",
           age: "",
-          grade: "",
-          knownFor: "",
-          lastSeen: "",
+          knownAs: "Wrenford's Resident GEEK",
           alibi: "",
-          notes: "Character notes coming soon.",
+          notes:
+            "Top 3 in class. Co-president of the Physics, Chess, and Mathematics Club. Hailee's ex-boyfriend - angry she left him for victim?",
           photo: "",
+          playlistLink:
+            "https://open.spotify.com/playlist/63A1BjLldUvk935geeLTcv?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+        },
+        {
+          id: "gina-wilson",
+          name: "Gina Wilson",
+          role: "Suspect",
+          status: "Person of Interest",
+          age: "15",
+          knownAs: "Roy's Kid Sister",
+          alibi: "",
+          notes:
+            "Victim's sister. Dating his best friend - disapproved? Sibling rivalry?",
+          photo: "",
+          playlistLink:
+            "https://open.spotify.com/playlist/5flbZ7sbV0CXdaM9uokiuv?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+        },
+        {
+          id: "ben-zales",
+          name: "Ben Zales",
+          role: "Suspect",
+          status: "Person of Interest",
+          age: "",
+          knownAs: "",
+          alibi: "",
+          notes: "Suspect notes coming soon.",
+          photo: "",
+          playlistLink: "",
+        },
+        {
+          id: "jesse-diaz",
+          name: "Jesse Diaz",
+          role: "Suspect",
+          status: "Person of Interest",
+          age: "",
+          knownAs: "",
+          alibi: "",
+          notes: "Suspect notes coming soon.",
+          photo: "",
+          playlistLink: "",
         },
       ],
+
       clues: [
         {
           id: 1,
