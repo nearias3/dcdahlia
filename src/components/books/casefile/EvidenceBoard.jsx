@@ -5,12 +5,13 @@ export default function EvidenceBoard({ evidence = [] }) {
 
   return (
     <section className="case-section">
-      <h3>Evidence Locker</h3>
+      <p className="eyebrow">Evidence Locker</p>
+      <h3>Collected Clues</h3>
 
       <div className="case-grid">
         {evidence.map((item) => (
           <article className="case-card evidence-card" key={item.id}>
-            <p className="eyebrow">{item.type || "Evidence"}</p>
+            <span className="evidence-tag">{item.type || "Evidence"}</span>
             <h4>{item.title}</h4>
             <p>{item.description}</p>
           </article>
