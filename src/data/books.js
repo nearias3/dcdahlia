@@ -213,19 +213,18 @@ const books = [
       timeline: [
         {
           id: 1,
-          time: "Case Opened",
-          event: "Roy Wilson is found dead, launching the investigation.",
+          time: "10:30 PM",
+          event: "One of the suspects is seen out around campus.",
         },
         {
           id: 2,
-          time: "Initial Interviews",
-          event:
-            "Students connected to Roy are questioned as persons of interest.",
+          time: "10:45 PM",
+          event: "Skyler Hartley is reportedly seen with Roy Wilson.",
         },
         {
           id: 3,
-          time: "Evidence Review",
-          event: "Clues begin to point toward more than one possible motive.",
+          time: "11:13 PM",
+          event: "Roy Wilson dies.",
         },
       ],
     },
