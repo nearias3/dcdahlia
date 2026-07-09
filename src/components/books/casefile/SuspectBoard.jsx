@@ -1,11 +1,20 @@
 import { useState } from "react";
 import SuspectFile from "./SuspectFile";
 
-export default function SuspectBoard({ suspects = [] }) {
-  const [activeSuspectId, setActiveSuspectId] = useState(suspects[0]?.id);
+export default function SuspectBoard({
+  suspects = [],
+  activeSuspectId,
+  setActiveSuspectId,
+}) {
+  const [localActiveSuspectId, setLocalActiveSuspectId] = useState(
+    suspects[0]?.id,
+  );
+
+  const currentActiveId = activeSuspectId || localActiveSuspectId;
+  const updateActiveId = setActiveSuspectId || setLocalActiveSuspectId;
 
   const activeSuspect = suspects.find(
-    (suspect) => suspect.id === activeSuspectId,
+    (suspect) => suspect.id === currentActiveId,
   );
 
   if (!suspects.length) {
@@ -19,9 +28,9 @@ export default function SuspectBoard({ suspects = [] }) {
           <button
             key={suspect.id}
             className={`folder-tab ${
-              suspect.id === activeSuspectId ? "active" : ""
+              suspect.id === currentActiveId ? "active" : ""
             }`}
-            onClick={() => setActiveSuspectId(suspect.id)}
+            onClick={() => updateActiveId(suspect.id)}
           >
             <small>{suspect.role === "Victim" ? "Victim" : "POI"}</small>
             <span>{suspect.name}</span>

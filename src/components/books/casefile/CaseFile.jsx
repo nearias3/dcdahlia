@@ -1,8 +1,23 @@
+import { useRef, useState } from "react";
 import SuspectBoard from "./SuspectBoard";
 import EvidenceBoard from "./EvidenceBoard";
 import InvestigationTimeline from "./InvestigationTimeline";
 import RelationshipBoard from "./RelationshipBoard";
+
 export default function CaseFile({ caseFile = {} }) {
+  const suspects = caseFile.suspects || [];
+  const [activeSuspectId, setActiveSuspectId] = useState(suspects[0]?.id);
+  const suspectBoardRef = useRef(null);
+
+  function handleSelectSuspect(id) {
+    setActiveSuspectId(id);
+
+    suspectBoardRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+
   return (
     <section className="case-file">
       <div className="case-file__header">
@@ -12,11 +27,20 @@ export default function CaseFile({ caseFile = {} }) {
       </div>
 
       <div className="case-file__content">
-        <SuspectBoard suspects={caseFile.suspects || []} />
+        <div ref={suspectBoardRef}>
+          <SuspectBoard
+            suspects={suspects}
+            activeSuspectId={activeSuspectId}
+            setActiveSuspectId={setActiveSuspectId}
+          />
+        </div>
+
         <RelationshipBoard
-          suspects={caseFile.suspects || []}
+          suspects={suspects}
           relationships={caseFile.relationships || []}
+          setActiveSuspectId={handleSelectSuspect}
         />
+
         <EvidenceBoard evidence={caseFile.clues || []} />
         <InvestigationTimeline timeline={caseFile.timeline || []} />
       </div>

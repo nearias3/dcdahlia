@@ -62,6 +62,7 @@ const books = [
             "Caucasian Male. Athlete. Bludgeoned to death. Murder weapon missing.",
           photo: "/images/books/akillertime/roy.jpeg",
           playlistLink: "",
+          boardPosition: { x: 50, y: 50 },
         },
         {
           id: "skyler-hartley",
@@ -77,6 +78,7 @@ const books = [
           photo: "/images/books/akillertime/skyler.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/1mHhO7q83KgJ0ILGhDp7oS?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=fe62596409714c3c",
+          boardPosition: { x: 25, y: 40 },
         },
         {
           id: "drew-morrison",
@@ -92,6 +94,7 @@ const books = [
           photo: "/images/books/akillertime/drew.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/5q3dbEVauNYy3DEToGnXnw?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+          boardPosition: { x: 36, y: 10 },
         },
         {
           id: "penny-paulson",
@@ -107,6 +110,7 @@ const books = [
           photo: "/images/books/akillertime/penny.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/2I5lusekzfJQIfhMjSbCIW?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+          boardPosition: { x: 20, y: 80 },
         },
         {
           id: "henry-parker",
@@ -122,6 +126,7 @@ const books = [
           photo: "/images/books/akillertime/henry.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/2PfrQVBfZcpRXKaCn2FYW9?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+          boardPosition: { x: 60, y: 10 },
         },
         {
           id: "hailee-gruber",
@@ -137,6 +142,7 @@ const books = [
           photo: "/images/books/akillertime/hailee.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/6UIkT76nuvzlRG3bSkVP1Y?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+          boardPosition: { x: 70, y: 80 },
         },
         {
           id: "nolan-lott",
@@ -152,6 +158,7 @@ const books = [
           photo: "/images/books/akillertime/nolan.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/63A1BjLldUvk935geeLTcv?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+          boardPosition: { x: 85, y: 65 },
         },
         {
           id: "gina-wilson",
@@ -167,6 +174,7 @@ const books = [
           photo: "/images/books/akillertime/gina.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/5flbZ7sbV0CXdaM9uokiuv?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
+          boardPosition: { x: 90, y: 30 },
         },
         {
           id: "ben-zales",
@@ -180,6 +188,7 @@ const books = [
           notes: "Suspect notes coming soon.",
           photo: "/images/books/akillertime/ben.jpeg",
           playlistLink: "",
+          boardPosition: { x: 10, y: 1 },
         },
         {
           id: "jesse-diaz",
@@ -193,29 +202,84 @@ const books = [
           notes: "Suspect notes coming soon.",
           photo: "/images/books/akillertime/jesse.jpeg",
           playlistLink: "",
+          boardPosition: { x: 5, y: 40 },
         },
       ],
 
-          relationships: [
-      {
-        id: 1,
-        from: "skyler-hartley",
-        to: "roy-wilson",
-        label: "Last seen together",
-      },
-      {
-        id: 2,
-        from: "penny-paulson",
-        to: "roy-wilson",
-        label: "Secret affair",
-      },
-      {
-        id: 3,
-        from: "hailee-gruber",
-        to: "roy-wilson",
-        label: "Girlfriend",
-      },
-    ],
+      relationships: [
+        {
+          id: 1,
+          from: "skyler-hartley",
+          to: "roy-wilson",
+          label: "Last seen together",
+        },
+        {
+          id: 2,
+          from: "penny-paulson",
+          to: "roy-wilson",
+          label: "Secret affair",
+        },
+        {
+          id: 3,
+          from: "hailee-gruber",
+          to: "roy-wilson",
+          label: "Dating",
+        },
+        {
+          id: 4,
+          from: "hailee-gruber",
+          to: "nolan-lott",
+          label: "Exes",
+        },
+        {
+          id: 5,
+          from: "gina-wilson",
+          to: "roy-wilson",
+          label: "Siblings",
+        },
+        {
+          id: 6,
+          from: "henry-parker",
+          to: "roy-wilson",
+          label: "Best Friends",
+        },
+        {
+          id: 7,
+          from: "henry-parker",
+          to: "gina-wilson",
+          label: "Dating",
+        },
+        {
+          id: 8,
+          from: "drew-morrison",
+          to: "roy-wilson",
+          label: "Enemies",
+        },
+        {
+          id: 9,
+          from: "skyler-hartley",
+          to: "penny-paulson",
+          label: "Best Friends",
+        },
+        {
+          id: 10,
+          from: "hailee-gruber",
+          to: "roy-wilson",
+          label: "Girlfriend",
+        },
+        {
+          id: 11,
+          from: "skyler-hartley",
+          to: "ben-zales",
+          label: "Hooking Up",
+        },
+        {
+          id: 12,
+          from: "skyler-hartley",
+          to: "jesse-diaz",
+          label: "Exes",
+        },
+      ],
 
       clues: [
         {
