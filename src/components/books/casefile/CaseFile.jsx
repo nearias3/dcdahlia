@@ -3,6 +3,7 @@ import SuspectBoard from "./SuspectBoard";
 import EvidenceBoard from "./EvidenceBoard";
 import InvestigationTimeline from "./InvestigationTimeline";
 import RelationshipBoard from "./RelationshipBoard";
+import SectionDivider from "./SectionDivider";
 
 export default function CaseFile({ caseFile = {} }) {
   const suspects = caseFile.suspects || [];
@@ -27,6 +28,12 @@ export default function CaseFile({ caseFile = {} }) {
       </div>
 
       <div className="case-file__content">
+        <SectionDivider
+          number="01"
+          title="Suspect Dossiers"
+          subtitle="Click a suspect to inspect their file."
+        />
+
         <div ref={suspectBoardRef}>
           <SuspectBoard
             suspects={suspects}
@@ -35,14 +42,33 @@ export default function CaseFile({ caseFile = {} }) {
           />
         </div>
 
+        <SectionDivider
+          number="02"
+          title="Relationship Board"
+          subtitle="Trace connections, motives, and secrets."
+        />
+
         <RelationshipBoard
           suspects={caseFile.suspects}
           relationships={caseFile.relationships}
           evidencePhotos={caseFile.evidencePhotos}
-          setActiveSuspectId={setActiveSuspectId}
+          setActiveSuspectId={handleSelectSuspect}
+        />
+
+        <SectionDivider
+          number="03"
+          title="Evidence Locker"
+          subtitle="Known clues recovered so far."
         />
 
         <EvidenceBoard evidence={caseFile.clues || []} />
+
+        <SectionDivider
+          number="04"
+          title="Case Timeline"
+          subtitle="Events leading up to Roy Wilson's death."
+        />
+
         <InvestigationTimeline timeline={caseFile.timeline || []} />
       </div>
     </section>

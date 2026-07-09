@@ -821,6 +821,49 @@ h1 {
     font-weight:bold;
 }
 
+.case-divider {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  margin: 5rem 0 3rem;
+}
+
+.case-divider__line {
+  flex: 1;
+  height: 1px;
+  background: rgba(0,0,0,.15);
+}
+
+.case-divider__text {
+  text-align: center;
+  min-width: 260px;
+}
+
+.case-divider__number {
+  margin-bottom: .35rem;
+
+  font-family: var(--font-typewriter);
+
+  font-size: .85rem;
+
+  letter-spacing: .2em;
+
+  color: var(--color-accent);
+}
+
+.case-divider h2 {
+  margin: 0;
+
+  font-size: 2rem;
+}
+
+.case-divider__text p:last-child {
+  margin-top: .5rem;
+
+  color: var(--color-text-light);
+}
+
 .button-link {
   display: inline-block;
   margin-top: 0.75rem;
