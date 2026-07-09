@@ -65,24 +65,32 @@ export default function RelationshipBoard({
             </button>
           ))}
 
-          {evidencePhotos.map((photo) => (
-            <article
-              className="evidence-photo"
-              key={photo.id}
-              style={{
-                left: `${photo.boardPosition.x}%`,
-                top: `${photo.boardPosition.y}%`,
-                transform: `translate(-50%, -50%) rotate(${photo.rotation}deg)`,
-              }}
-            >
-              <span className="push-pin" />
+          {evidencePhotos.map((photo) => {
+            const isPaper = photo.appearance === "paper";
 
-              <img src={photo.image} alt={photo.title} />
+            return (
+              <article
+                className={isPaper ? "evidence-paper" : "evidence-photo"}
+                key={photo.id}
+                style={{
+                  left: `${photo.boardPosition.x}%`,
+                  top: `${photo.boardPosition.y}%`,
+                  transform: `translate(-50%, -50%) rotate(${photo.rotation}deg)`,
+                }}
+              >
+                {!isPaper && <span className="push-pin" />}
 
-              <h4>{photo.title}</h4>
-              <small>{photo.subtitle}</small>
-            </article>
-          ))}
+                <img src={photo.image} alt={photo.title} />
+
+                {!isPaper && (
+                  <>
+                    <h4>{photo.title}</h4>
+                    <small>{photo.subtitle}</small>
+                  </>
+                )}
+              </article>
+            );
+          })}
 
           {relationships.map((relationship) => {
             const from = suspects.find((s) => s.id === relationship.from);

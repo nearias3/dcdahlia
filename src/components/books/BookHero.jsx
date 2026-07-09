@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function BookHero({ book }) {
   return (
-    <section className="book-hero">
+    <section className="book-hero case-hero">
       <div className="book-hero__cover">
         {book.media.coverImage ? (
           <img
@@ -14,26 +14,38 @@ export default function BookHero({ book }) {
         )}
       </div>
 
-      <div className="book-hero__content">
-        <p className="eyebrow">Case File</p>
+      <div className="case-hero__content">
+        <p className="eyebrow">Case File #001</p>
         <h1>{book.metadata.title}</h1>
-        <p>{book.metadata.genre}</p>
+
+        <div className="case-status">Status: Unsolved</div>
+
+        <dl className="case-summary">
+          <div>
+            <dt>Genre</dt>
+            <dd>{book.metadata.genre}</dd>
+          </div>
+
+          <div>
+            <dt>Victim</dt>
+            <dd>Roy Wilson</dd>
+          </div>
+
+          <div>
+            <dt>Location</dt>
+            <dd>Wrenford Academy</dd>
+          </div>
+
+          <div>
+            <dt>Release</dt>
+            <dd>{book.metadata.releaseDate}</dd>
+          </div>
+        </dl>
+
         <p>{book.descriptions.long || "Synopsis coming soon."}</p>
 
-        <div className="book-meta-list">
-          <p>
-            <strong>Genre:</strong> {book.metadata.genre}
-          </p>
-          <p>
-            <strong>Release:</strong> {book.metadata.releaseDate}
-          </p>
-          <p>
-            <strong>Series:</strong> {book.metadata.series || "Standalone"}
-          </p>
-        </div>
-
         <Link className="button-link" to="/books">
-          Back to Books
+          Back to Case Files
         </Link>
       </div>
     </section>

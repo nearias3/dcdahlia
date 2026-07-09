@@ -311,6 +311,7 @@ const books = [
       evidencePhotos: [
         {
           id: "bridge",
+          appearance: "polaroid",
           title: "Crime Scene",
           subtitle: "BRIDGE",
           image: "/images/books/akillertime/bridge.jpeg",
@@ -319,6 +320,17 @@ const books = [
             y: 84,
           },
           rotation: 3,
+        },
+        {
+          id: "note",
+          appearance: "paper",
+          title: "Anonymous Note",
+          image: "/images/books/akillertime/detectivenote.jpeg",
+          boardPosition: {
+            x: 27,
+            y: 23,
+          },
+          rotation: -3,
         },
       ],
 
