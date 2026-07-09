@@ -196,6 +196,27 @@ const books = [
         },
       ],
 
+          relationships: [
+      {
+        id: 1,
+        from: "skyler-hartley",
+        to: "roy-wilson",
+        label: "Last seen together",
+      },
+      {
+        id: 2,
+        from: "penny-paulson",
+        to: "roy-wilson",
+        label: "Secret affair",
+      },
+      {
+        id: 3,
+        from: "hailee-gruber",
+        to: "roy-wilson",
+        label: "Girlfriend",
+      },
+    ],
+
       clues: [
         {
           id: 1,
