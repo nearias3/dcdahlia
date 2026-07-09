@@ -1,6 +1,7 @@
 export default function RelationshipBoard({
   suspects = [],
   relationships = [],
+  evidencePhotos = [],
   setActiveSuspectId,
 }) {
   if (!suspects.length) return null;
@@ -40,7 +41,6 @@ export default function RelationshipBoard({
               className={`corkboard-card corkboard-card--map ${
                 suspect.role === "Victim" ? "corkboard-card--victim" : ""
               }`}
-
               key={suspect.id}
               type="button"
               style={{
@@ -63,6 +63,25 @@ export default function RelationshipBoard({
               <h4>{suspect.name}</h4>
               <p>{suspect.role}</p>
             </button>
+          ))}
+
+          {evidencePhotos.map((photo) => (
+            <article
+              className="evidence-photo"
+              key={photo.id}
+              style={{
+                left: `${photo.boardPosition.x}%`,
+                top: `${photo.boardPosition.y}%`,
+                transform: `translate(-50%, -50%) rotate(${photo.rotation}deg)`,
+              }}
+            >
+              <span className="push-pin" />
+
+              <img src={photo.image} alt={photo.title} />
+
+              <h4>{photo.title}</h4>
+              <small>{photo.subtitle}</small>
+            </article>
           ))}
 
           {relationships.map((relationship) => {

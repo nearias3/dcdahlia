@@ -36,9 +36,10 @@ export default function CaseFile({ caseFile = {} }) {
         </div>
 
         <RelationshipBoard
-          suspects={suspects}
-          relationships={caseFile.relationships || []}
-          setActiveSuspectId={handleSelectSuspect}
+          suspects={caseFile.suspects}
+          relationships={caseFile.relationships}
+          evidencePhotos={caseFile.evidencePhotos}
+          setActiveSuspectId={setActiveSuspectId}
         />
 
         <EvidenceBoard evidence={caseFile.clues || []} />

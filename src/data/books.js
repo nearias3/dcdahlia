@@ -308,6 +308,20 @@ const books = [
         },
       ],
 
+      evidencePhotos: [
+        {
+          id: "bridge",
+          title: "Crime Scene",
+          subtitle: "BRIDGE",
+          image: "/images/books/akillertime/bridge.jpeg",
+          boardPosition: {
+            x: 50,
+            y: 84,
+          },
+          rotation: 3,
+        },
+      ],
+
       clues: [
         {
           id: 1,
