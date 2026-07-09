@@ -63,6 +63,7 @@ const books = [
           photo: "/images/books/akillertime/roy.jpeg",
           playlistLink: "",
           boardPosition: { x: 50, y: 50 },
+          rotation: -3,
         },
         {
           id: "skyler-hartley",
@@ -78,7 +79,8 @@ const books = [
           photo: "/images/books/akillertime/skyler.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/1mHhO7q83KgJ0ILGhDp7oS?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=fe62596409714c3c",
-          boardPosition: { x: 25, y: 40 },
+          boardPosition: { x: 25, y: 42 },
+          rotation: 2,
         },
         {
           id: "drew-morrison",
@@ -94,7 +96,8 @@ const books = [
           photo: "/images/books/akillertime/drew.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/5q3dbEVauNYy3DEToGnXnw?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          boardPosition: { x: 36, y: 10 },
+          boardPosition: { x: 38, y: 13 },
+          rotation: -1,
         },
         {
           id: "penny-paulson",
@@ -110,7 +113,8 @@ const books = [
           photo: "/images/books/akillertime/penny.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/2I5lusekzfJQIfhMjSbCIW?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          boardPosition: { x: 20, y: 80 },
+          boardPosition: { x: 25, y: 80 },
+          rotation: 4,
         },
         {
           id: "henry-parker",
@@ -126,7 +130,8 @@ const books = [
           photo: "/images/books/akillertime/henry.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/2PfrQVBfZcpRXKaCn2FYW9?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          boardPosition: { x: 60, y: 10 },
+          boardPosition: { x: 65, y: 14 },
+          rotation: -2,
         },
         {
           id: "hailee-gruber",
@@ -142,7 +147,8 @@ const books = [
           photo: "/images/books/akillertime/hailee.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/6UIkT76nuvzlRG3bSkVP1Y?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          boardPosition: { x: 70, y: 80 },
+          boardPosition: { x: 68, y: 74 },
+          rotation: 1.5,
         },
         {
           id: "nolan-lott",
@@ -158,7 +164,8 @@ const books = [
           photo: "/images/books/akillertime/nolan.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/63A1BjLldUvk935geeLTcv?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          boardPosition: { x: 85, y: 65 },
+          boardPosition: { x: 88, y: 70 },
+          rotation: 3.5,
         },
         {
           id: "gina-wilson",
@@ -174,7 +181,8 @@ const books = [
           photo: "/images/books/akillertime/gina.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/5flbZ7sbV0CXdaM9uokiuv?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          boardPosition: { x: 90, y: 30 },
+          boardPosition: { x: 90, y: 40 },
+          rotation: 1,
         },
         {
           id: "ben-zales",
@@ -188,7 +196,8 @@ const books = [
           notes: "Suspect notes coming soon.",
           photo: "/images/books/akillertime/ben.jpeg",
           playlistLink: "",
-          boardPosition: { x: 10, y: 1 },
+          boardPosition: { x: 10, y: 12 },
+          rotation: 3,
         },
         {
           id: "jesse-diaz",
@@ -202,7 +211,8 @@ const books = [
           notes: "Suspect notes coming soon.",
           photo: "/images/books/akillertime/jesse.jpeg",
           playlistLink: "",
-          boardPosition: { x: 5, y: 40 },
+          boardPosition: { x: 8, y: 42 },
+          rotation: -1.5,
         },
       ],
 
@@ -211,73 +221,90 @@ const books = [
           id: 1,
           from: "skyler-hartley",
           to: "roy-wilson",
-          label: "Last seen together",
+          label: "LAST SEEN TOGETHER",
+          color: "orange",
+          notePosition: { x: 37, y: 50 },
         },
         {
           id: 2,
           from: "penny-paulson",
           to: "roy-wilson",
-          label: "Secret affair",
+          label: "SECRET AFFAIR",
+          color: "red",
+          notePosition: { x: 37, y: 69 },
         },
         {
           id: 3,
           from: "hailee-gruber",
           to: "roy-wilson",
-          label: "Dating",
+          label: "DATING",
+          color: "pink",
+          notePosition: { x: 60, y: 67 },
         },
         {
           id: 4,
           from: "hailee-gruber",
           to: "nolan-lott",
-          label: "Exes",
+          label: "EXES",
+          color: "red",
+          notePosition: { x: 78, y: 76 },
         },
         {
           id: 5,
           from: "gina-wilson",
           to: "roy-wilson",
-          label: "Siblings",
+          label: "SIBLINGS",
+          color: "blue",
+          notePosition: { x: 70, y: 49 },
         },
         {
           id: 6,
           from: "henry-parker",
           to: "roy-wilson",
-          label: "Best Friends",
+          label: "BEST FRIENDS",
+          color: "green",
+          notePosition: { x: 60, y: 31 },
         },
         {
           id: 7,
           from: "henry-parker",
           to: "gina-wilson",
-          label: "Dating",
+          label: "DATING",
+          color: "pink",
+          notePosition: { x: 76, y: 29 },
         },
         {
           id: 8,
           from: "drew-morrison",
           to: "roy-wilson",
-          label: "Enemies",
+          label: "ENEMIES",
+          color: "yellow",
+          notePosition: { x: 42, y: 30 },
         },
         {
           id: 9,
           from: "skyler-hartley",
           to: "penny-paulson",
-          label: "Best Friends",
+          label: "BEST FRIENDS",
+          color: "green",
+          notePosition: { x: 25, y: 61 },
         },
-        {
-          id: 10,
-          from: "hailee-gruber",
-          to: "roy-wilson",
-          label: "Girlfriend",
-        },
+
         {
           id: 11,
           from: "skyler-hartley",
           to: "ben-zales",
-          label: "Hooking Up",
+          label: "HOOKING UP",
+          color: "purple",
+          notePosition: { x: 16, y: 28 },
         },
         {
           id: 12,
           from: "skyler-hartley",
           to: "jesse-diaz",
-          label: "Exes",
+          label: "EXES",
+          color: "red",
+          notePosition: { x: 16, y: 46 },
         },
       ],
 
