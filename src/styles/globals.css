@@ -383,6 +383,17 @@ h1 {
   color: var(--color-paper-light);
 }
 
+.playlist-feature {
+  margin-top: 1.25rem;
+}
+
+.playlist-feature p {
+  margin: 0.75rem 0 0;
+  max-width: 45ch;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
 .status-stamp--victim {
   border-color: #1f1f1f;
   color: #1f1f1f;

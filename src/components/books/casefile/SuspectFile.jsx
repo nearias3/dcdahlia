@@ -62,14 +62,21 @@ export default function SuspectFile({ suspect }) {
         </section>
 
         {suspect.playlistLink && (
-          <a
-            className="button-link playlist-link"
-            href={suspect.playlistLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Open Character Playlist
-          </a>
+          <div className="playlist-feature">
+            <a
+              className="button-link playlist-link"
+              href={suspect.playlistLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              🎵 {suspect.name}&apos;s Killer Playlist
+            </a>
+
+            <p>
+              Songs that inspired {suspect.name}&apos;s character while writing{" "}
+              <em>A Killer Time</em>.
+            </p>
+          </div>
         )}
       </div>
     </article>
