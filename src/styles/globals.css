@@ -780,6 +780,135 @@ button:hover {
   margin: 0.25rem 0 0;
 }
 
+.suspicion-meter {
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  border: var(--border-soft);
+  background: var(--color-paper);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-typewriter);
+  text-transform: uppercase;
+}
+
+.suspicion-meter strong {
+  color: var(--color-red-dark);
+}
+
+.dossier {
+  background: var(--color-paper-light);
+}
+
+.dossier-photo {
+  position: relative;
+  padding: 0.75rem 0.75rem 1rem;
+  background: var(--color-paper);
+  border: var(--border-soft);
+  box-shadow: 0 12px 24px rgba(31, 31, 31, 0.18);
+  transform: rotate(-1deg);
+}
+
+.dossier-photo__clip {
+  position: absolute;
+  top: -0.75rem;
+  left: 1rem;
+  font-size: 1.8rem;
+  transform: rotate(-18deg);
+}
+
+.dossier-photo img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.dossier-photo span {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+}
+
+.dossier-photo p {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-typewriter);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.dossier-details h3 {
+  margin: 0.25rem 0;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.suspicion-stamp {
+  display: inline-block;
+  margin: 0.75rem 0 1.25rem;
+  padding: 0.45rem 0.75rem;
+  border: 2px solid currentColor;
+  font-family: var(--font-typewriter);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transform: rotate(-1.5deg);
+}
+
+.suspicion-stamp--high {
+  color: var(--color-red-dark);
+}
+
+.suspicion-stamp--medium {
+  color: #8a5a00;
+}
+
+.suspicion-stamp--low {
+  color: #4f6f52;
+}
+
+.suspicion-stamp--victim {
+  color: var(--color-ink);
+}
+
+.dossier-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.dossier-list div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(31, 31, 31, 0.12);
+}
+
+.dossier-list dt {
+  font-family: var(--font-typewriter);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dossier-list dd {
+  margin: 0;
+}
+
+.case-notes {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(216, 180, 122, 0.25);
+  border-left: 4px solid var(--color-red);
+}
+
+.case-notes h4 {
+  margin-top: 0;
+  font-family: var(--font-typewriter);
+  text-transform: uppercase;
+}
+
 .navbar,
 .footer,
 .featured-book,

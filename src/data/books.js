@@ -57,6 +57,7 @@ const books = [
           age: "17",
           knownAs: "Wrenford's Resident PLAYER",
           alibi: "N/A",
+          suspicionLevel: "Victim",
           notes:
             "Caucasian Male. Athlete. Bludgeoned to death. Murder weapon missing.",
           photo: "/images/books/akillertime/roy.jpeg",
@@ -70,6 +71,7 @@ const books = [
           age: "17",
           knownAs: "Wrenford's Resident REBEL",
           alibi: "",
+          suspicionLevel: "High",
           notes:
             "Ex-girlfriend of victim's brother. Sent to headmaster's office more than anyone in her class. Best friends with Penny - very protective of her. LAST TO SEE VICTIM ALIVE.",
           photo: "/images/books/akillertime/skyler.jpeg",
@@ -84,6 +86,7 @@ const books = [
           age: "17",
           knownAs: "Wrenford's Resident BAD BOY",
           alibi: "",
+          suspicionLevel: "High",
           notes:
             "Richest student at Wrenford. Reputation for breaking the rules. HATES victim.",
           photo: "/images/books/akillertime/drew.jpeg",
@@ -98,6 +101,7 @@ const books = [
           age: "17",
           knownAs: "Wrenford's Resident SLUT",
           alibi: "",
+          suspicionLevel: "Medium",
           notes:
             "Having affair with victim. Close friends with Skylar and Drew. Conquest well known. Angry victim wouldn't leave girlfriend for her?",
           photo: "/images/books/akillertime/penny.jpeg",
@@ -112,6 +116,7 @@ const books = [
           age: "17",
           knownAs: "Wrenford's Resident GOLDEN BOY",
           alibi: "",
+          suspicionLevel: "Low",
           notes:
             "Victim's best friend. Popular athlete. Dating victim's sister. Victim possibly disapproved?",
           photo: "/images/books/akillertime/henry.jpeg",
@@ -126,6 +131,7 @@ const books = [
           age: "17",
           knownAs: "Wrenford's Resident KNOW-IT-ALL",
           alibi: "",
+          suspicionLevel: "High",
           notes:
             "Victim's official girlfriend. Valedictorian. Co-president of the Physics, Chess, and Mathematics Club. Knew victim was cheating on her?",
           photo: "/images/books/akillertime/hailee.jpeg",
@@ -140,6 +146,7 @@ const books = [
           age: "17",
           knownAs: "Wrenford's Resident GEEK",
           alibi: "",
+          suspicionLevel: "Medium",
           notes:
             "Top 3 in class. Co-president of the Physics, Chess, and Mathematics Club. Hailee's ex-boyfriend - angry she left him for victim?",
           photo: "/images/books/akillertime/nolan.jpeg",
@@ -154,6 +161,7 @@ const books = [
           age: "16",
           knownAs: "Roy's Kid Sister",
           alibi: "",
+          suspicionLevel: "Low",
           notes:
             "Victim's sister. Dating his best friend - disapproved? Sibling rivalry?",
           photo: "/images/books/akillertime/gina.jpeg",
@@ -168,6 +176,7 @@ const books = [
           age: "17",
           knownAs: "",
           alibi: "",
+          suspicionLevel: "Low",
           notes: "Suspect notes coming soon.",
           photo: "/images/books/akillertime/ben.jpeg",
           playlistLink: "",
@@ -180,6 +189,7 @@ const books = [
           age: "17",
           knownAs: "",
           alibi: "",
+          suspicionLevel: "Low",
           notes: "Suspect notes coming soon.",
           photo: "/images/books/akillertime/jesse.jpeg",
           playlistLink: "",

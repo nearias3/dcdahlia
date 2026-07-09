@@ -1,48 +1,66 @@
 export default function SuspectFile({ suspect }) {
   if (!suspect) return null;
 
+  const roleClass = suspect.role.toLowerCase();
+  const suspicionClass = suspect.suspicionLevel?.toLowerCase() || "unknown";
+
   return (
-    <article className="suspect-file">
-      <div className="suspect-file__photo">
+    <article className="suspect-file dossier">
+      <div className="dossier-photo">
+        <div className="dossier-photo__clip">📎</div>
+
         {suspect.photo ? (
           <img src={suspect.photo} alt={suspect.name} />
         ) : (
           <span>Photo Coming Soon</span>
         )}
+
+        <p>Case File Photo</p>
       </div>
 
-      <div className="suspect-file__details">
-        <p className="eyebrow">Suspect File</p>
+      <div className="dossier-details">
+        <p className="eyebrow">Case File</p>
         <h3>{suspect.name}</h3>
-        <p
-          className={`status-stamp status-stamp--${suspect.role.toLowerCase()}`}
-        >
-          {suspect.status}
-        </p>
 
-        <dl className="suspect-details-list">
+        <div className={`status-stamp status-stamp--${roleClass}`}>
+          {suspect.status}
+        </div>
+
+        {suspect.suspicionLevel && (
+          <div className={`suspicion-stamp suspicion-stamp--${suspicionClass}`}>
+            {suspect.suspicionLevel === "Victim"
+              ? "Victim File"
+              : `${suspect.suspicionLevel} Suspicion`}
+          </div>
+        )}
+
+        <dl className="dossier-list">
           <div>
             <dt>Role</dt>
             <dd>{suspect.role || "Unknown"}</dd>
           </div>
+
           <div>
             <dt>Age</dt>
             <dd>{suspect.age || "Unknown"}</dd>
           </div>
+
           <div>
-            <dt>Known As</dt>
+            <dt>Case Designation</dt>
             <dd>{suspect.knownAs || "Unknown"}</dd>
           </div>
+
           <div>
             <dt>Alibi</dt>
             <dd>{suspect.alibi || "Unknown"}</dd>
           </div>
         </dl>
 
-        <div className="suspect-notes">
-          <h4>Notes</h4>
+        <section className="case-notes">
+          <h4>Detective&apos;s Notes</h4>
           <p>{suspect.notes}</p>
-        </div>
+        </section>
+
         {suspect.playlistLink && (
           <a
             className="button-link playlist-link"
@@ -50,7 +68,7 @@ export default function SuspectFile({ suspect }) {
             target="_blank"
             rel="noreferrer"
           >
-            Listen to {suspect.name}&apos;s Killer Playlist
+            Open Character Playlist
           </a>
         )}
       </div>
