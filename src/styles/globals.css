@@ -389,7 +389,7 @@ h1 {
 
 .playlist-feature p {
   margin: 0.75rem 0 0;
-  max-width: 45ch;
+  max-width: 60ch;
   color: var(--color-muted);
   font-size: 0.95rem;
 }
@@ -654,6 +654,14 @@ h1 {
 
 .sticky-note p {
   margin: 0;
+}
+
+.sticky-note:hover{
+    z-index:20;
+    transform:
+        translate(-50%,-50%)
+        scale(1.15)
+        rotate(0deg);
 }
 
 .status-stamp--victim {
