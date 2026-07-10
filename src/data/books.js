@@ -7,8 +7,15 @@ const books = [
       title: "A Killer Time",
       subtitle: "subtitle",
       series: "series title",
+
       releaseDate: "2024",
       genre: "Murder Mystery",
+
+      caseNumber: "AKT-2024-001",
+      leadDetective: "Detective Bennett",
+      caseStatus: "UNSOLVED",
+      setting: "Wrenford Academy",
+      victim: "Roy Wilson",
     },
 
     media: {

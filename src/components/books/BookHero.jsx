@@ -22,23 +22,33 @@ export default function BookHero({ book }) {
 
         <dl className="case-summary">
           <div>
-            <dt>Genre</dt>
-            <dd>{book.metadata.genre}</dd>
+            <dt>Case No.</dt>
+            <dd>{book.metadata.caseNumber}</dd>
+          </div>
+
+          <div>
+            <dt>Status</dt>
+            <dd>{book.metadata.caseStatus}</dd>
           </div>
 
           <div>
             <dt>Victim</dt>
-            <dd>Roy Wilson</dd>
+            <dd>{book.metadata.victim}</dd>
           </div>
 
           <div>
             <dt>Location</dt>
-            <dd>Wrenford Academy</dd>
+            <dd>{book.metadata.setting}</dd>
           </div>
 
           <div>
-            <dt>Release</dt>
-            <dd>{book.metadata.releaseDate}</dd>
+            <dt>Lead Detective</dt>
+            <dd>{book.metadata.leadDetective}</dd>
+          </div>
+
+          <div>
+            <dt>Genre</dt>
+            <dd>{book.metadata.genre}</dd>
           </div>
         </dl>
 
