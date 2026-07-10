@@ -1,6 +1,14 @@
 export default function SuspectFile({ suspect }) {
   if (!suspect) return null;
 
+  const spotifyEmbedUrl = suspect.playlistLink
+    ? suspect.playlistLink
+        .split("?")[0]
+        .replace(
+            "open.spotify.com/playlist/",
+            "open.spotify.com/embed/playlist/",
+        )
+        : "";
   const roleClass = suspect.role.toLowerCase();
   const suspicionClass = suspect.suspicionLevel?.toLowerCase() || "unknown";
 
@@ -62,21 +70,33 @@ export default function SuspectFile({ suspect }) {
         </section>
 
         {suspect.playlistLink && (
-          <div className="playlist-feature">
-            <a
-              className="button-link playlist-link"
-              href={suspect.playlistLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              🎵 {suspect.name}&apos;s Killer Playlist
-            </a>
+  <section className="playlist-feature">
+    <div className="playlist-feature__header">
+      <p className="eyebrow">Character Soundtrack</p>
+      <h4>{suspect.name}&apos;s Killer Playlist</h4>
+      <p>
+        {suspect.name}&apos;s top songs in {" "}
+        <em>A Killer Time</em>.
+      </p>
+    </div>
 
-            <p>
-              Songs that inspired {suspect.name}&apos;s character while writing{" "}
-              <em>A Killer Time</em>.
-            </p>
-          </div>
+    <iframe
+      className="spotify-player"
+      src={spotifyEmbedUrl}
+      title={`${suspect.name}'s Killer Playlist`}
+      loading="lazy"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    />
+
+    <a
+      className="button-link playlist-link"
+      href={suspect.playlistLink}
+      target="_blank"
+      rel="noreferrer"
+    >
+      OPEN IN SPOTIFY
+    </a>
+  </section>
         )}
       </div>
     </article>
