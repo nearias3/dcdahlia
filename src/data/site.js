@@ -23,8 +23,11 @@ const site = {
         "She's part of an acting troupe that puts on murder mystery shows.",
         "Her favorite drink is a Corpse Reviver #2.",
       ],
-    newsletterText:
-      "Get updates about new releases, events, bonus content, and more.",
+  },
+
+  newsletter: {
+    provider: "buttondown",
+    action: "",
   },
 
   branding: {

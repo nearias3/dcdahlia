@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Container from "../components/ui/Container";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xjgqnjaz";
 
 export default function Contact() {
   const [status, setStatus] = useState("idle");
