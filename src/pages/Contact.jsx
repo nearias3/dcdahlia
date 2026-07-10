@@ -1,46 +1,119 @@
+import { useState } from "react";
 import Container from "../components/ui/Container";
-import site from "../data/site";
+
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
 
 export default function Contact() {
+  const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    setStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("The message could not be sent.");
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.",
+      );
+    }
+  }
+
   return (
     <Container>
       <section className="page-header">
         <p className="eyebrow">Contact</p>
-        <h1>Get in Touch</h1>
-        <p>For reader messages, media inquiries, and newsletter updates.</p>
+        <h1>Send a Message</h1>
+        <p>
+          Questions, event inquiries, and messages for D.C. Dahlia are welcome.
+        </p>
       </section>
 
-      <section className="contact-grid">
-        <div className="contact-card">
-          <h2>Contact</h2>
+      <section className="contact-card">
+        {status === "success" ? (
+          <div className="form-success" role="status">
+            <h2>Message received</h2>
+            <p>Thank you! Your message has been sent.</p>
 
-          <form name="contact" method="POST" data-netlify="true">
-            <input type="hidden" name="form-name" value="contact" />
+            <button type="button" onClick={() => setStatus("idle")}>
+              Send Another Message
+            </button>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <div className="form-field">
+              <label htmlFor="contact-name">Name</label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                autoComplete="name"
+                required
+              />
+            </div>
 
-            <label htmlFor="name">Name</label>
-            <input id="name" name="name" type="text" required />
+            <div className="form-field">
+              <label htmlFor="contact-email">Email</label>
+              <input
+                id="contact-email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+              />
+            </div>
 
-            <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" required />
+            <div className="form-field">
+              <label htmlFor="contact-subject">Subject</label>
+              <input id="contact-subject" name="subject" type="text" required />
+            </div>
 
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" rows="6" required />
+            <div className="form-field">
+              <label htmlFor="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="7" required />
+            </div>
 
-            <button type="submit">Send Message</button>
+            <input
+              type="text"
+              name="_gotcha"
+              className="form-honeypot"
+              tabIndex="-1"
+              autoComplete="off"
+            />
+
+            {status === "error" && (
+              <p className="form-error" role="alert">
+                {errorMessage}
+              </p>
+            )}
+
+            <button type="submit" disabled={status === "submitting"}>
+              {status === "submitting" ? "Sending…" : "Send Message"}
+            </button>
           </form>
-        </div>
-
-        <div className="contact-card">
-          <h2>Newsletter</h2>
-          <p>
-            Newsletter signup coming soon. This will link to{" "}
-            {site.author.substack || "D.C. Dahlia’s newsletter"}.
-          </p>
-
-          <a className="button-link" href="#newsletter">
-            Join the Newsletter
-          </a>
-        </div>
+        )}
       </section>
     </Container>
   );
