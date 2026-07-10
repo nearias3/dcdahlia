@@ -824,20 +824,40 @@ h1 {
 .case-divider {
   display: flex;
   align-items: center;
-  gap: 2rem;
-
-  margin: 5rem 0 3rem;
+  gap: 1.5rem;
+  margin: 2rem 0 1rem;
 }
 
 .case-divider__line {
   flex: 1;
   height: 1px;
-  background: rgba(0,0,0,.15);
+  background: rgba(31, 31, 31, 0.2);
 }
 
 .case-divider__text {
-  text-align: center;
   min-width: 260px;
+  text-align: center;
+}
+
+.case-divider__text p {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-typewriter);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-red-dark);
+}
+
+.case-divider__text h3 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+}
+
+.case-divider__text span {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
 }
 
 .case-divider__number {
