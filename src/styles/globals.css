@@ -1131,6 +1131,94 @@ button:hover {
   background: #fffaf3;
 }
 
+.purchase-dossier {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border: var(--border-soft);
+  background: var(--color-paper-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.purchase-dossier::after {
+  content: "AUTHORIZED RELEASE";
+  position: absolute;
+  right: 1.5rem;
+  top: 1.25rem;
+  padding: 0.3rem 0.65rem;
+  border: 2px solid rgba(139, 30, 30, 0.18);
+  color: rgba(139, 30, 30, 0.22);
+  font-family: var(--font-typewriter);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transform: rotate(8deg);
+  pointer-events: none;
+}
+
+.purchase-dossier__header {
+  max-width: 620px;
+  margin-bottom: 1.5rem;
+}
+
+.purchase-dossier__header h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.purchase-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.purchase-card {
+  display: flex;
+  min-height: 150px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(31, 31, 31, 0.16);
+  background: var(--color-paper);
+  box-shadow: 0 10px 20px rgba(31, 31, 31, 0.08);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.purchase-card:hover {
+  color: var(--color-ink);
+  background: var(--color-paper-light);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 28px rgba(31, 31, 31, 0.15);
+}
+
+.purchase-card__label {
+  font-family: var(--font-typewriter);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.purchase-card strong {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+}
+
+.purchase-card > span:last-child {
+  color: var(--color-red-dark);
+  font-weight: 700;
+}
+
+.purchase-empty {
+  margin: 0;
+  padding: 1rem;
+  background: var(--color-paper);
+}
+
 .button-row {
   display: flex;
   justify-content: center;
