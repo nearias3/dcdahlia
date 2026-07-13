@@ -1303,8 +1303,10 @@ button:hover {
 }
 
 .suspect-file__photo img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
 }
 
@@ -2022,6 +2024,17 @@ button:disabled {
   .suspect-file {
     grid-template-columns: 1fr;
   }
+
+  suspect-file__photo{
+      min-height:auto;
+  }
+
+  .suspect-file__photo img{
+      max-height:320px;
+      width:100%;
+      margin:auto;
+  }
+
 
   .featured-book {
     grid-template-columns: 1fr;
