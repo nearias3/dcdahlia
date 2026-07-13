@@ -39,7 +39,8 @@ const site = {
   },
 
   calendar: {
-    embedUrl: "PASTE_THE_GOOGLE_CALENDAR_IFRAME_SRC_HERE",
+    embedUrl:
+      "https://calendar.google.com/calendar/embed?src=eb6afc79543e5fa8a78051eded86e5e1e85b28840fd49043514b5f6e08dbbb32%40group.calendar.google.com&ctz=America%2FLos_Angeles",
   },
 
   events: [],
