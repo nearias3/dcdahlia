@@ -39,17 +39,20 @@ const books = [
     reviews: [
       {
         id: 1,
-        quote: "The murder mystery you've waited for",
+        title: "The murder mystery you've waited for",
+        body: "This debut book was a delight to read. Every time I put it down, I felt like I had paused a movie and couldn't wait to get back to it.",
         source: "Reader Review",
       },
       {
         id: 2,
-        quote: "Couldn't put it down.",
-        source: "Reader review",
+        title: "Couldn't put it down",
+        body: "This book kept me on the edge of my seat the entire time. Really hoping for a sequel because I'm definitely not done with these characters yet.",
+        source: "Reader Review",
       },
       {
         id: 3,
-        quote: "Breakfast club meets muder mystery",
+        title: "Breakfast Club Meets Murder Mystery",
+        body: "Wow. Wow. Wow. It's a great YA mystery with great characters and growth. This book would make a great movie—it has all the suspense and thrills... and of course murder!",
         source: "Reader Review",
       },
     ],

@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import LoadingScreen from "./components/ui/LoadingScreen";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,6 +13,7 @@ import ScrollToTop from "./components/ui/ScrollToTop";
 export default function App() {
   return (
     <>
+      <LoadingScreen />
       <ScrollToTop />
 
       <Routes>
