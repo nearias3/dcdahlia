@@ -11,7 +11,7 @@ const site = {
     fullBio: [
       "D.C. Dahlia is an emerging author known for her gripping, humorous mystery novels. Inspired by classic thrillers and modern suspense, Dahlia's storytelling keeps readers on the edge of their seats. She writes with a deep passion for unraveling secrets and exploring the darker side of human nature.",
       "Her debut novel, A Killer Time, has been praised for its intricate plot and well-drawn characters. Set in a boarding school, this mystery follows a teenage girl as she aims to solve the mystery of her classmate's murder. D.C. Dahlia continues to work on new projects that promise to be just as thrilling.",
-      "Along with being an author, D.C. Dahlia is also an actress and is studying to be a sommelier. Her inspiration for this series came from her love of murder mysteries - and correctly guessing plot twists! When she's not writing stories, she enjoys Gozilla movies, eating sushi, and taking naps while cartoons play on the television.",
+      "Along with being an author, D.C. Dahlia is also an actress and is studying to be a sommelier. Her inspiration for this series came from her love of murder mysteries - and correctly guessing plot twists! When she's not writing stories, she enjoys Godzilla movies, eating sushi, and taking naps while cartoons play on the television.",
     ],
     authorPhoto: "/images/author/dcdahlia.png",
     quote:

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import site from "../../data/site";
+import ThemeToggle from "../ui/ThemeToggle";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,16 +30,6 @@ export default function Navbar() {
           </div>
         </NavLink>
 
-        <button
-          className="navbar__toggle"
-          type="button"
-          aria-label="Toggle navigation menu"
-          aria-expanded={isMenuOpen}
-          onClick={() => setIsMenuOpen((current) => !current)}
-        >
-          ☰
-        </button>
-
         <nav
           className={`navbar__links ${isMenuOpen ? "is-open" : ""}`}
           aria-label="Main navigation"
@@ -59,6 +50,21 @@ export default function Navbar() {
             Contact
           </NavLink>
         </nav>
+
+        <div className="navbar__actions">
+          <ThemeToggle />
+
+          <button
+            className="navbar__toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+            onClick={() => setIsMenuOpen((current) => !current)}
+          >
+            ☰
+          </button>
+        </div>
+
       </div>
     </header>
   );

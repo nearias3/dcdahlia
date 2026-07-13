@@ -39,7 +39,7 @@ a {
 
 .navbar {
   border-bottom: 1px solid rgba(31, 31, 31, 0.12);
-  background: #fffaf3;
+  background: var(--color-paper-light);
 }
 
 .navbar__inner {
@@ -97,7 +97,7 @@ a {
 
 .footer {
   border-top: 1px solid rgba(31, 31, 31, 0.12);
-  background: #fffaf3;
+  background: var(--color-paper-light);
   padding: 1.5rem 0;
 }
 
@@ -914,7 +914,7 @@ h1 {
 
   letter-spacing: .2em;
 
-  color: var(--color-accent);
+  color: var(--color-red-dark);
 }
 
 .case-divider h2 {
@@ -926,7 +926,7 @@ h1 {
 .case-divider__text p:last-child {
   margin-top: .5rem;
 
-  color: var(--color-text-light);
+  color: var(--color-muted);
 }
 
 .button-link {
@@ -983,7 +983,7 @@ button:hover {
 .calendar-card {
   padding: 1.5rem;
   border: 1px solid rgba(31, 31, 31, 0.12);
-  background: #fffaf3;
+  background: var(--color-paper-light);
 }
 
 .contact-grid {
@@ -995,7 +995,7 @@ button:hover {
 .contact-card {
   padding: 1.5rem;
   border: 1px solid rgba(31, 31, 31, 0.12);
-  background: #fffaf3;
+  background: var(--color-paper-light);
 }
 
 form {
@@ -1027,8 +1027,8 @@ button {
 }
 
 button:hover {
-  background: #1f1f1f;
-  color: #fffaf3;
+  background: var(--color-ink);
+  color: var(--color-paper-light);
 }
 
 .about-grid {
@@ -1140,7 +1140,7 @@ button:hover {
 .purchase-section {
   padding: 1.5rem;
   border: 1px solid rgba(31, 31, 31, 0.12);
-  background: #fffaf3;
+  background: var(--color-paper-light);
 }
 
 .purchase-dossier {
@@ -1955,6 +1955,392 @@ button:disabled {
   opacity: 0.7;
 }
 
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle {
+  justify-self: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-typewriter);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--color-red-dark);
+  color: var(--color-paper-light);
+  transform: translateY(-1px);
+}
+
+.theme-toggle__icon {
+  display: inline-block;
+  transform-origin: 35% 70%;
+  transition: transform 0.25s ease;
+}
+
+.theme-toggle:hover .theme-toggle__icon {
+  transform: rotate(-14deg);
+}
+
+.theme-toggle:disabled {
+  cursor: wait;
+  opacity: 0.9;
+}
+
+html.theme-transition-to-noir .theme-toggle__icon {
+  animation: flashlight-click 650ms ease;
+}
+
+/* ========================================
+   THEME-SAFE SURFACES
+======================================== */
+
+.navbar,
+.footer,
+.featured-book,
+.book-card,
+.case-hero,
+.case-file,
+.contact-card,
+.about-content,
+.fun-facts,
+.purchase-section,
+.purchase-dossier,
+.reviews-preview,
+.home-section,
+.newsletter-cta,
+.newsletter-signup,
+.events-calendar-card,
+.event-highlights {
+  color: var(--color-ink);
+  background: var(--color-paper-light);
+  border-color: var(--color-border);
+}
+
+.review-card,
+.event-preview-card,
+.purchase-card,
+.author-quote,
+.playlist-feature,
+.case-notes,
+.suspicion-meter,
+.newsletter-placeholder,
+.calendar-placeholder {
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border-color: var(--color-border);
+}
+
+input,
+textarea {
+  color: var(--color-ink);
+  background: var(--color-paper);
+  border-color: var(--color-border);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-muted);
+}
+
+.case-divider__line {
+  background: var(--color-border);
+}
+
+.dossier-list div,
+.suspect-details-list div,
+.fun-facts li {
+  border-color: var(--color-border);
+}
+
+/* ========================================
+   NOIR MODE
+======================================== */
+
+:root[data-theme="dark"] body {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(178, 58, 58, 0.08),
+      transparent 34rem
+    ),
+    var(--color-paper);
+}
+
+:root[data-theme="dark"] .navbar,
+:root[data-theme="dark"] .footer {
+  background: #181716;
+  border-color: var(--color-border);
+}
+
+:root[data-theme="dark"] .navbar__stories {
+  color: var(--color-muted);
+}
+
+:root[data-theme="dark"] .home-hero {
+  color: #f8f3ec;
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(178, 58, 58, 0.2),
+      transparent 45%
+    ),
+    #0c0b0b;
+}
+
+:root[data-theme="dark"] .home-hero .button-link {
+  color: #f8f3ec;
+  border-color: #f8f3ec;
+}
+
+:root[data-theme="dark"] .home-hero .button-link:hover {
+  color: #111;
+  background: #f8f3ec;
+}
+
+/* Physical paper objects remain light */
+:root[data-theme="dark"] .book-hero__cover,
+:root[data-theme="dark"] .featured-book__cover,
+:root[data-theme="dark"] .book-card__cover,
+:root[data-theme="dark"] .dossier-photo,
+:root[data-theme="dark"] .evidence-photo {
+  color: #1f1f1f;
+  background: #f2e8d9;
+  border-color: rgba(31, 31, 31, 0.18);
+}
+
+:root[data-theme="dark"] .dossier-photo p {
+  color: #1f1f1f;
+}
+
+/* Keep the folder recognizable, but darker */
+:root[data-theme="dark"] .folder-body {
+  background: var(--color-folder);
+  border-color: var(--color-border-strong);
+}
+
+:root[data-theme="dark"] .folder-tab {
+  color: #f2e8d9;
+  background: var(--color-folder-dark);
+  border-color: var(--color-border-strong);
+}
+
+:root[data-theme="dark"] .folder-tab.active {
+  color: #fff3e8;
+  background: var(--color-folder);
+}
+
+/* Dossier itself remains readable */
+:root[data-theme="dark"] .suspect-file {
+  color: var(--color-ink);
+  background: #1b1918;
+  border-color: var(--color-border);
+}
+
+:root[data-theme="dark"] .case-notes,
+:root[data-theme="dark"] .playlist-feature,
+:root[data-theme="dark"] .review-card,
+:root[data-theme="dark"] .event-preview-card,
+:root[data-theme="dark"] .purchase-card {
+  background: var(--color-paper-dark);
+}
+
+/* Embedded third-party content remains white */
+:root[data-theme="dark"] .calendar-frame,
+:root[data-theme="dark"] .newsletter-signup__form {
+  background: #fff;
+}
+
+/* Corkboard and notes are physical objects */
+:root[data-theme="dark"] .corkboard-card {
+  color: #1f1f1f;
+  background: #fffaf3;
+}
+
+:root[data-theme="dark"] .corkboard-card p {
+  color: #5c554f;
+}
+
+:root[data-theme="dark"] .sticky-note {
+  color: #1f1f1f;
+}
+
+/* Status colors need enough contrast */
+:root[data-theme="dark"] .status-stamp--victim {
+  color: #ddd4ca;
+  border-color: #ddd4ca;
+}
+
+:root[data-theme="dark"] .suspicion-stamp--medium {
+  color: #e9b65e;
+}
+
+:root[data-theme="dark"] .suspicion-stamp--low {
+  color: #9bc7a0;
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  color: var(--color-ink);
+  background: #2b2826;
+  border-color: var(--color-border);
+}
+
+:root[data-theme="dark"] .theme-toggle:hover {
+  color: #171313;
+  background: var(--color-red-dark);
+}
+
+/* ========================================
+   FLASHLIGHT THEME TRANSITION
+======================================== */
+
+html::before,
+html::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0;
+}
+
+html::before {
+  background: rgba(5, 5, 5, 0.78);
+}
+
+html::after {
+  width: 42vw;
+  min-width: 320px;
+  max-width: 620px;
+  left: -55vw;
+  right: auto;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 245, 205, 0.45) 0%,
+      rgba(255, 235, 175, 0.2) 34%,
+      rgba(255, 225, 150, 0.06) 58%,
+      transparent 72%
+    );
+
+  filter: blur(6px);
+  transform: skewX(-8deg);
+}
+
+/* Dark layer appears while the flashlight crosses */
+html.theme-is-transitioning::before {
+  opacity: 1;
+  animation: theme-dark-curtain 650ms ease-in-out forwards;
+}
+
+/* Beam sweeps left to right */
+html.theme-is-transitioning::after {
+  opacity: 1;
+  animation: flashlight-sweep 650ms ease-in-out forwards;
+}
+
+/* Entering Noir */
+html.theme-transition-to-noir::before {
+  animation-name: theme-dark-curtain;
+}
+
+/* Returning to Classic */
+html.theme-transition-to-classic::before {
+  animation-name: theme-light-curtain;
+}
+
+html.theme-transition-to-classic::after {
+  transform: skewX(8deg);
+  animation-name: flashlight-sweep-reverse;
+}
+
+@keyframes flashlight-sweep {
+  0% {
+    left: -55vw;
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  88% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 115vw;
+    opacity: 0;
+  }
+}
+
+@keyframes flashlight-sweep-reverse {
+  0% {
+    left: 115vw;
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  88% {
+    opacity: 1;
+  }
+
+  100% {
+    left: -55vw;
+    opacity: 0;
+  }
+}
+
+@keyframes theme-dark-curtain {
+  0% {
+    opacity: 0;
+  }
+
+  42% {
+    opacity: 0.72;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes theme-light-curtain {
+  0% {
+    opacity: 0;
+    background: rgba(255, 248, 225, 0.12);
+  }
+
+  42% {
+    opacity: 0.55;
+    background: rgba(255, 248, 225, 0.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes case-file-progress {
   from {
     width: 0;
@@ -1972,10 +2358,29 @@ button:disabled {
   }
 }
 
+@keyframes flashlight-click {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  35% {
+    transform: rotate(-24deg) scale(1.15);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .loading-screen,
-  .loading-screen__progress span {
-    animation: none;
+  html::before,
+  html::after {
+    display: none;
+  }
+
+  .theme-toggle__icon {
+    animation: none !important;
+    transition: none;
   }
 }
 
@@ -2118,6 +2523,23 @@ button:disabled {
 
   .calendar-embed {
     min-height: 550px;
+  }
+
+  .navbar__actions {
+    margin-left: auto;
+  }
+
+  .theme-toggle {
+    padding: 0.55rem;
+  }
+
+  .theme-toggle__text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
 }
 

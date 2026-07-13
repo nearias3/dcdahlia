@@ -82,7 +82,7 @@ const books = [
           status: "Person of Interest",
           age: "17",
           knownAs: "Wrenford's Resident REBEL",
-          alibi: "",
+          alibi: "Claims to have been with Ben Zales, who confirms this.",
           suspicionLevel: "High",
           notes:
             "Ex-girlfriend of victim's brother. Sent to headmaster's office more than anyone in her class. Best friends with Penny - very protective of her. LAST TO SEE VICTIM ALIVE.",
