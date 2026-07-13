@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Container from "../components/ui/Container";
+import NewsletterForm from "../components/newsletter/NewsletterForm";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xjgqnjaz";
 
@@ -53,11 +54,17 @@ export default function Contact() {
 
       <section className="contact-card">
         {status === "success" ? (
-          <div className="form-success" role="status">
+          <div className="form-success" role="status" aria-live="polite">
             <h2>Message received</h2>
-            <p>Thank you! Your message has been sent.</p>
+            <p>Thank you! Your message has been sent to D.C. Dahlia.</p>
 
-            <button type="button" onClick={() => setStatus("idle")}>
+            <button
+              type="button"
+              onClick={() => {
+                setStatus("idle");
+                setErrorMessage("");
+              }}
+            >
               Send Another Message
             </button>
           </div>
@@ -96,6 +103,12 @@ export default function Contact() {
             </div>
 
             <input
+              type="hidden"
+              name="_subject"
+              value="New message from the D.C. Dahlia website"
+            />
+
+            <input
               type="text"
               name="_gotcha"
               className="form-honeypot"
@@ -109,12 +122,17 @@ export default function Contact() {
               </p>
             )}
 
-            <button type="submit" disabled={status === "submitting"}>
+            <button
+              type="submit"
+              disabled={status === "submitting"}
+              aria-busy={status === "submitting"}
+            >
               {status === "submitting" ? "Sending…" : "Send Message"}
             </button>
           </form>
         )}
       </section>
+      <NewsletterForm />
     </Container>
   );
 }
