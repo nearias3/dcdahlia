@@ -1286,10 +1286,10 @@ button:hover {
 
 .suspect-file {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
   gap: 1.5rem;
   padding: 1.5rem;
-  background: #fffaf3;
+  background: var(--color-paper-light);
   border: 1px solid rgba(31, 31, 31, 0.15);
 }
 
@@ -1414,6 +1414,8 @@ button:hover {
 
 .dossier-photo {
   position: relative;
+  align-self: start;
+  width: 100%;
   padding: 0.75rem 0.75rem 1rem;
   background: var(--color-paper);
   border: var(--border-soft);
@@ -1430,10 +1432,14 @@ button:hover {
 }
 
 .dossier-photo img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
   display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
 }
 
 .dossier-photo span {
@@ -1448,6 +1454,10 @@ button:hover {
   font-size: 0.8rem;
   text-transform: uppercase;
   text-align: center;
+}
+
+.dossier-details {
+  min-width: 0;
 }
 
 .dossier-details h3 {
@@ -1968,6 +1978,27 @@ button:disabled {
     animation: none;
   }
 }
+
+@media (max-width: 900px) {
+  .suspect-file {
+    grid-template-columns: 1fr;
+  }
+
+  .dossier-photo {
+    width: min(100%, 360px);
+    margin-inline: 0;
+    justify-self: start;
+  }
+
+  .dossier-photo img {
+    max-height: 420px;
+  }
+
+  .dossier-details {
+    width: 100%;
+  }
+}
+
 @media (max-width: 700px) {
   .footer__inner {
     flex-direction: column;
@@ -2021,20 +2052,36 @@ button:disabled {
     min-height: 340px;
   }
 
-  .suspect-file {
-    grid-template-columns: 1fr;
-  }
+  .folder-body {
+  padding: 1rem;
+}
 
-  suspect-file__photo{
-      min-height:auto;
-  }
+.suspect-file {
+  padding: 1rem;
+  gap: 1.25rem;
+}
 
-  .suspect-file__photo img{
-      max-height:320px;
-      width:100%;
-      margin:auto;
-  }
+.dossier-photo {
+  width: min(100%, 300px);
+}
 
+.dossier-photo img {
+  max-height: 340px;
+}
+
+.dossier-details h3 {
+  font-size: clamp(2rem, 11vw, 3rem);
+  overflow-wrap: anywhere;
+}
+
+.dossier-list div {
+  grid-template-columns: 1fr;
+  gap: 0.2rem;
+}
+
+.spotify-player {
+  height: 300px;
+}
 
   .featured-book {
     grid-template-columns: 1fr;
