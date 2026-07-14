@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Container from "../components/ui/Container";
 import NewsletterForm from "../components/newsletter/NewsletterForm";
+import SocialLinks from "../components/ui/SocialLinks";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xjgqnjaz";
 
@@ -132,6 +133,12 @@ export default function Contact() {
           </form>
         )}
       </section>
+
+      <SocialLinks
+        heading="Follow the Case"
+        description="Prefer social media? Keep up with D.C. Dahlia's latest clues, announcements, and behind-the-scenes updates."
+      />
+      
       <NewsletterForm />
     </Container>
   );

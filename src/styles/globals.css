@@ -1051,6 +1051,13 @@ button:hover {
   align-items: start;
 }
 
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
 .author-photo-placeholder {
   display: flex;
   justify-content: center;
@@ -1968,6 +1975,148 @@ button:disabled {
   opacity: 0.7;
 }
 
+.social-panel {
+  position: relative;
+  margin-top: 0;
+  padding: 2rem;
+  overflow: hidden;
+  border: var(--border-soft);
+  border-left: 5px solid var(--color-red);
+  border-radius: var(--radius-md);
+  background: var(--color-paper-light);
+  box-shadow: var(--shadow-soft);
+}
+
+.social-panel::after {
+  content: "FOLLOW-UP REQUIRED";
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  padding: 0.3rem 0.6rem;
+  border: 2px solid color-mix(
+    in srgb,
+    var(--color-red) 30%,
+    transparent
+  );
+  color: color-mix(
+    in srgb,
+    var(--color-red) 38%,
+    transparent
+  );
+  font-family: var(--font-typewriter);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transform: rotate(7deg);
+  pointer-events: none;
+}
+
+.social-panel__header {
+  max-width: 650px;
+  margin-bottom: 1.5rem;
+}
+
+.social-panel__header h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.social-panel__header > p:last-child {
+  margin-bottom: 0;
+  color: var(--color-muted);
+}
+
+.social-links--full {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.social-link-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  min-height: 100px;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-paper);
+  box-shadow: 0 10px 22px rgba(31, 31, 31, 0.08);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.social-link-card:hover {
+  color: var(--color-ink);
+  border-color: var(--color-red);
+  background: var(--color-paper-light);
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: 0 16px 28px rgba(31, 31, 31, 0.14);
+}
+
+.social-link-card__icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--color-red);
+  border-radius: 50%;
+  color: var(--color-red-dark);
+  font-size: 1.4rem;
+}
+
+.social-link-card small {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--color-muted);
+  font-family: var(--font-typewriter);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.social-link-card strong {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+}
+
+.social-link-card__arrow {
+  color: var(--color-red-dark);
+  font-size: 1.4rem;
+}
+
+/* Footer version */
+
+.social-links--compact {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.social-links--compact a {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-paper);
+  color: var(--color-red-dark);
+  font-size: 1.1rem;
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.social-links--compact a:hover {
+  color: var(--color-paper-light);
+  background: var(--color-red-dark);
+  transform: translateY(-2px) rotate(-4deg);
+}
+
 .navbar__actions {
   display: flex;
   align-items: center;
@@ -2564,5 +2713,17 @@ html.theme-transition-to-classic::after {
     clip-path: inset(50%);
     white-space: nowrap;
   }
+
+  .social-links--full {
+  grid-template-columns: 1fr;
+}
+
+.social-panel {
+  padding: 1.25rem;
+}
+
+.social-panel::after {
+  display: none;
+}
 }
 

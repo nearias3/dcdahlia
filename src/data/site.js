@@ -5,6 +5,7 @@ const site = {
     email: "",
     instagram: "https://www.instagram.com/dcdahliastories/",
     facebook: "",
+    tiktok: "https://www.tiktok.com/@d.c..dahlia?_r=1&_t=ZT-981zkYsXoPW",
     substack: "",
     shortBio:
       "D.C. Dahlia is an emerging author known for her gripping, humorous mystery novels. Inspired by classic thrillers and modern suspense, Dahlia's storytelling keeps readers on the edge of their seats. She writes with a deep passion for unraveling secrets and exploring the darker side of human nature.",
@@ -28,8 +29,7 @@ const site = {
   newsletter: {
     embedUrl:
       "https://352eecd7.sibforms.com/v2/serve/MUIFACbPB3LhvU8D8yESbYEtk-iv7yIHObeuSu6_p_UdiU6ecbntEQHh4JuaO360J2cNPFvYMnUDfQMFnbaDYyoI_tZqF8_rqbmoB5YwZr2mNkHmSlmMC1EROr8qFiLID8hea4O44zne746nFbUQNu0GF4OVGfcxegCabbWCgXMPv3WXkQDBibCpmxfSqCRwgLHs264pImccEIgWBQ==",
-    provider: "buttondown",
-    action: "",
+    provider: "Brevo",
   },
 
   branding: {
