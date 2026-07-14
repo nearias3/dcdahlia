@@ -43,103 +43,122 @@ export default function Contact() {
     }
   }
 
-  return (
-    <Container>
-      <section className="page-header">
-        <p className="eyebrow">Contact</p>
-        <h1>Send a Message</h1>
-        <p>
-          Questions, event inquiries, and messages for D.C. Dahlia are welcome.
-        </p>
-      </section>
+    return (
+      <Container>
+        <section className="page-header">
+          <p className="eyebrow">Contact</p>
+          <h1>Contact the Lead Detective</h1>
+          <p>Get in touch with D.C. Dahlia!</p>
+        </section>
 
-      <section className="contact-card">
-        {status === "success" ? (
-          <div className="form-success" role="status" aria-live="polite">
-            <h2>Message received</h2>
-            <p>Thank you! Your message has been sent to D.C. Dahlia.</p>
-
-            <button
-              type="button"
-              onClick={() => {
-                setStatus("idle");
-                setErrorMessage("");
-              }}
-            >
-              Send Another Message
-            </button>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit}>
-            <div className="form-field">
-              <label htmlFor="contact-name">Name</label>
-              <input
-                id="contact-name"
-                name="name"
-                type="text"
-                autoComplete="name"
-                required
-              />
-            </div>
-
-            <div className="form-field">
-              <label htmlFor="contact-email">Email</label>
-              <input
-                id="contact-email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-              />
-            </div>
-
-            <div className="form-field">
-              <label htmlFor="contact-subject">Subject</label>
-              <input id="contact-subject" name="subject" type="text" required />
-            </div>
-
-            <div className="form-field">
-              <label htmlFor="contact-message">Message</label>
-              <textarea id="contact-message" name="message" rows="7" required />
-            </div>
-
-            <input
-              type="hidden"
-              name="_subject"
-              value="New message from the D.C. Dahlia website"
-            />
-
-            <input
-              type="text"
-              name="_gotcha"
-              className="form-honeypot"
-              tabIndex="-1"
-              autoComplete="off"
-            />
-
-            {status === "error" && (
-              <p className="form-error" role="alert">
-                {errorMessage}
+        <div className="contact-connections">
+          <section className="contact-card contact-card--form">
+            <div className="contact-section-header">
+              <p className="eyebrow">Direct Correspondence</p>
+              <h2>Submit a Lead</h2>
+              <p>
+                Questions, event inquiries, and messages for D.C. Dahlia are
+                welcome.
               </p>
+            </div>
+
+            {status === "success" ? (
+              <div className="form-success" role="status" aria-live="polite">
+                <h2>Message received</h2>
+                <p>Thank you! Your message has been sent to D.C. Dahlia.</p>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setStatus("idle");
+                    setErrorMessage("");
+                  }}
+                >
+                  Send Another Message
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit}>
+                <div className="form-field">
+                  <label htmlFor="contact-name">Name</label>
+                  <input
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    required
+                  />
+                </div>
+
+                <div className="form-field">
+                  <label htmlFor="contact-email">Email</label>
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                  />
+                </div>
+
+                <div className="form-field">
+                  <label htmlFor="contact-subject">Subject</label>
+                  <input
+                    id="contact-subject"
+                    name="subject"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div className="form-field">
+                  <label htmlFor="contact-message">Message</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows="5"
+                    required
+                  />
+                </div>
+
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New message from the D.C. Dahlia website"
+                />
+
+                <input
+                  type="text"
+                  name="_gotcha"
+                  className="form-honeypot"
+                  tabIndex="-1"
+                  autoComplete="off"
+                />
+
+                {status === "error" && (
+                  <p className="form-error" role="alert">
+                    {errorMessage}
+                  </p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={status === "submitting"}
+                  aria-busy={status === "submitting"}
+                >
+                  {status === "submitting" ? "Sending…" : "Send Message"}
+                </button>
+              </form>
             )}
+          </section>
 
-            <button
-              type="submit"
-              disabled={status === "submitting"}
-              aria-busy={status === "submitting"}
-            >
-              {status === "submitting" ? "Sending…" : "Send Message"}
-            </button>
-          </form>
-        )}
-      </section>
+          <NewsletterForm compact />
+        </div>
 
-      <SocialLinks
-        heading="Follow the Case"
-        description="Prefer social media? Keep up with D.C. Dahlia's latest clues, announcements, and behind-the-scenes updates."
-      />
-      
-      <NewsletterForm />
-    </Container>
-  );
+        <SocialLinks
+          heading="Follow the Case"
+          description="Prefer social media? Keep up with D.C. Dahlia's latest clues, announcements, and behind-the-scenes updates."
+        />
+      </Container>
+    );
 }

@@ -1,10 +1,14 @@
 import site from "../../data/site";
 
-export default function NewsletterForm() {
+export default function NewsletterForm({ compact = false }) {
   const embedUrl = site.newsletter?.embedUrl;
 
   return (
-    <section className="newsletter-signup">
+    <section
+      className={`newsletter-signup ${
+        compact ? "newsletter-signup--compact" : ""
+      }`}
+    >
       <div className="newsletter-signup__content">
         <p className="eyebrow">Reader Dispatches</p>
 
