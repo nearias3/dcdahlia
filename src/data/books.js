@@ -100,7 +100,8 @@ const books = [
           status: "Person of Interest",
           age: "17",
           knownAs: "Wrenford's Resident BAD BOY",
-          alibi: "Claims to have been playing poker with Penny and Ben. Time mostly accounted for with some gaps.",
+          alibi:
+            "Claims to have been playing poker with Penny and Ben. Time mostly accounted for with some gaps.",
           suspicionLevel: "High",
           notes:
             "Richest student at Wrenford. Reputation for breaking the rules. HATES victim.",
@@ -117,7 +118,8 @@ const books = [
           status: "Person of Interest",
           age: "17",
           knownAs: "Wrenford's Resident SLUT",
-          alibi: "Claims to have hung out with Drew and Ben before going to bed. Corroborated by Drew.",
+          alibi:
+            "Claims to have hung out with Drew and Ben before going to bed. Corroborated by Drew.",
           suspicionLevel: "Medium",
           notes:
             "Having affair with victim. Close friends with Skylar and Drew. Conquest well known. Angry victim wouldn't leave girlfriend for her?",
@@ -134,14 +136,15 @@ const books = [
           status: "Person of Interest",
           age: "17",
           knownAs: "Wrenford's Resident GOLDEN BOY",
-          alibi: "Claims to have witnessed fight between victim and Hailee. Comforted Hailee in common room. Account corroborated by Hailee and Gina.",
+          alibi:
+            "Claims to have witnessed fight between victim and Hailee. Comforted Hailee in common room. Account corroborated by Hailee and Gina.",
           suspicionLevel: "Low",
           notes:
             "Victim's best friend since childhood. Popular athlete. Dating victim's sister. Victim possibly disapproved?",
           photo: "/images/books/akillertime/henry.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/2PfrQVBfZcpRXKaCn2FYW9?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          boardPosition: { x: 65, y: 14 },
+          boardPosition: { x: 69, y: 14 },
           rotation: -2,
         },
         {
@@ -151,7 +154,8 @@ const books = [
           status: "Person of Interest",
           age: "17",
           knownAs: "Wrenford's Resident KNOW-IT-ALL",
-          alibi: "Claims to have gotten in a fight with victim, then spent the remainder of the evening in the common room with Henry and Gina. Roommate also places her away from the crime scene.",
+          alibi:
+            "Claims to have gotten in a fight with victim, then spent the remainder of the evening in the common room with Henry and Gina. Roommate also places her away from the crime scene.",
           suspicionLevel: "Medium",
           notes:
             "Victim's official girlfriend. Valedictorian. Co-president of the Physics, Chess, and Mathematics Club. Knew victim was cheating on her?",
@@ -168,7 +172,8 @@ const books = [
           status: "Person of Interest",
           age: "17",
           knownAs: "Wrenford's Resident GEEK",
-          alibi: "Claims to have been in the library, then the common room to witness fight between victim and Hailee. Account of former corroborrated by Physics club.",
+          alibi:
+            "Claims to have been in the library, then the common room to witness fight between victim and Hailee. Account of former corroborrated by Physics club.",
           suspicionLevel: "Medium",
           notes:
             "Top 3 in class. Co-president of the Physics, Chess, and Mathematics Club. Hailee's ex-boyfriend - angry she left him for victim?",
@@ -185,7 +190,8 @@ const books = [
           status: "Person of Interest",
           age: "16",
           knownAs: "Roy's SISTER",
-          alibi: "Claims to have been with Hailee in common room comforting her after fight with victim. Their timelines appear consistent.",
+          alibi:
+            "Claims to have been with Hailee in common room comforting her after fight with victim. Their timelines appear consistent.",
           suspicionLevel: "Low",
           notes:
             "Victim's sister. Dating his best friend - disapproved? Sibling rivalry?",
@@ -201,10 +207,12 @@ const books = [
           role: "Suspect",
           status: "Person of Interest",
           age: "17",
-          knownAs: "Skyler's CURRENT FLAME", 
-          alibi: "Spent evening with Penny and Drew, night with Skyler in his room. Both accounts corroborated.",
+          knownAs: "Skyler's CURRENT FLAME",
+          alibi:
+            "Spent evening with Penny and Drew, night with Skyler in his room. Both accounts corroborated.",
           suspicionLevel: "Low",
-          notes: "In sexual relationship with Skyler. Roommates with Drew. Would do anything for them?",
+          notes:
+            "In sexual relationship with Skyler. Roommates with Drew. Would do anything for them?",
           photo: "/images/books/akillertime/ben.jpeg",
           playlistLink: "",
           boardPosition: { x: 10, y: 12 },
@@ -219,7 +227,8 @@ const books = [
           knownAs: "Skyler's EX-BOYFRIEND",
           alibi: "N/A",
           suspicionLevel: "Low",
-          notes: "Used to date Skyler, who also dated victim's brother and was perhaps involved with victim. Jealousy?",
+          notes:
+            "Used to date Skyler, who also dated victim's brother and was perhaps involved with victim. Jealousy?",
           photo: "/images/books/akillertime/jesse.jpeg",
           playlistLink: "",
           boardPosition: { x: 8, y: 42 },
@@ -274,7 +283,7 @@ const books = [
           to: "roy-wilson",
           label: "BEST FRIENDS",
           color: "green",
-          notePosition: { x: 60, y: 31 },
+          notePosition: { x: 62, y: 31 },
         },
         {
           id: 7,
@@ -331,6 +340,42 @@ const books = [
             y: 84,
           },
           rotation: 3,
+        },
+        {
+          id: "school",
+          appearance: "polaroid",
+          title: "Wrenford Academy",
+          subtitle: "EXTERIOR",
+          image: "/images/books/akillertime/wrenford.jpeg",
+          boardPosition: {
+            x: 86,
+            y: 14,
+          },
+          rotation: -2,
+        },
+        {
+          id: "hallway",
+          appearance: "polaroid",
+          title: "Wrenford Academy",
+          subtitle: "HALLWAY",
+          image: "/images/books/akillertime/hallway.jpeg",
+          boardPosition: {
+            x: 10,
+            y: 73,
+          },
+          rotation: -1,
+        },
+        {
+          id: "door",
+          appearance: "polaroid",
+          title: "Dorm",
+          subtitle: "ROY'S ROOM",
+          image: "/images/books/akillertime/door.jpeg",
+          boardPosition: {
+            x: 53,
+            y: 14,
+          },
+          rotation: -2,
         },
         {
           id: "note",
