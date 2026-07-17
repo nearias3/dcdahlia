@@ -15,6 +15,16 @@ const site = {
       "Along with being an author, D.C. Dahlia is also an actress and is studying to be a sommelier. Her inspiration for this series came from her love of murder mysteries - and correctly guessing plot twists! When she's not writing stories, she enjoys Godzilla movies, eating sushi, and taking naps while cartoons play on the television.",
     ],
     authorPhoto: "/images/author/dcdahlia.png",
+    dossier: {
+      fileNumber: "DC-001",
+      classification: "Author Personnel Record",
+      occupation: "Mystery Author · Actress · Sommelier-in-Training",
+      specialty: "Humorous murder mysteries",
+      knownFor: "A Killer Time",
+      currentAssignment: "Developing the next investigation",
+      creativeMethod: "Identifies the killer around Chapter Five",
+      status: "Active",
+    },
     quote:
       "I’ve always found mortality severely daunting and having control over who lives and dies gives me a sense of control I've always wanted. And why not make it a little funny while I'm at it?",
     facts: [
