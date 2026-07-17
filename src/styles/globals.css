@@ -527,20 +527,19 @@ h1 {
 }
 
 .quote-stamp {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    padding: .3rem .65rem;
-    border: 2px solid rgba(139,30,30,.45);
-    color: rgba(139, 30, 30, 0.734);
-    font-family: var(--font-typewriter);
-    font-size: .72rem;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    transform: rotate(8deg);
-    pointer-events: none;
-
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 0.65rem;
+  border: 2px solid rgba(139, 30, 30, 0.779);
+  color: rgba(139, 30, 30, 0.58);
+  font-family: var(--font-typewriter);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: rotate(8deg);
+  pointer-events: none;
 }
 
 .relationship-board-section {

@@ -109,7 +109,7 @@ const books = [
           photo: "/images/books/akillertime/drew.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/5q3dbEVauNYy3DEToGnXnw?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          quote: "I'm naturally good looking and rich",
+          quote: "I'm naturally good looking and rich.",
           boardPosition: { x: 38, y: 13 },
           rotation: -1,
         },
@@ -147,7 +147,7 @@ const books = [
           photo: "/images/books/akillertime/henry.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/2PfrQVBfZcpRXKaCn2FYW9?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          quote: "My best friend was murdered; why do I have to do homework?",
+          quote: "My best friend was murdered. Why do I have to do homework?",
           boardPosition: { x: 69, y: 14 },
           rotation: -2,
         },
@@ -166,7 +166,7 @@ const books = [
           photo: "/images/books/akillertime/hailee.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/6UIkT76nuvzlRG3bSkVP1Y?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          quote: "I forget you're not stupid",
+          quote: "I forget you're not stupid.",
           boardPosition: { x: 68, y: 74 },
           rotation: 1.5,
         },
@@ -185,7 +185,7 @@ const books = [
           photo: "/images/books/akillertime/nolan.jpeg",
           playlistLink:
             "https://open.spotify.com/playlist/63A1BjLldUvk935geeLTcv?go=1&sp_cid=addfd533-d6ec-4d2d-8738-cc70379f15ba&utm_source=embed_player_p&utm_medium=desktop",
-          quote: "My mom was gonna fight your mom",
+          quote: "My mom was gonna fight your mom.",
           boardPosition: { x: 88, y: 70 },
           rotation: 3.5,
         },
@@ -239,7 +239,7 @@ const books = [
             "Used to date Skyler, who also dated victim's brother and was perhaps involved with victim. Jealousy?",
           photo: "/images/books/akillertime/jesse.jpeg",
           playlistLink: "",
-          quote: "Girls love scars",
+          quote: "Girls love scars.",
           boardPosition: { x: 8, y: 42 },
           rotation: -1.5,
         },
