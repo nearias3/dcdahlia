@@ -69,13 +69,13 @@ export default function SuspectFile({ suspect }) {
           <p>{suspect.notes}</p>
         </section>
 
-        {suspect.quote && (
-          <section className="interview-quote">
-            <h4>Recorded Statement</h4>
+        <section className="interview-quote">
+          <span className="quote-stamp">VERIFIED</span>
 
-            <blockquote>“{suspect.quote}”</blockquote>
-          </section>
-        )}
+          <h4>Recorded Statement</h4>
+
+          <blockquote>“{suspect.quote}”</blockquote>
+        </section>
 
         {suspect.playlistLink && (
           <section className="playlist-feature">
