@@ -3407,24 +3407,8 @@ html.theme-transition-to-classic::after {
   flex-direction: column;
   padding: 1rem 1.25rem;
 }
-}
 
-* Responsive calendar */
-
-@media (max-width: 900px) {
-  .investigator-calendar__layout {
-    grid-template-columns: 1fr;
-  }
-
-  .calendar-case-notes {
-    width: min(100%, 500px);
-    min-height: 240px;
-    justify-self: center;
-  }
-}
-
-@media (max-width: 700px) {
-  .investigator-calendar__toolbar {
+.investigator-calendar__toolbar {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -3444,5 +3428,17 @@ html.theme-transition-to-classic::after {
 
   .planner-day {
     min-height: 90px;
+  }
+}
+
+@media (max-width: 900px) {
+  .investigator-calendar__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-case-notes {
+    width: min(100%, 500px);
+    min-height: 240px;
+    justify-self: center;
   }
 }
