@@ -69,34 +69,41 @@ export default function SuspectFile({ suspect }) {
           <p>{suspect.notes}</p>
         </section>
 
+        {suspect.quote && (
+          <section className="interview-quote">
+            <h4>Recorded Statement</h4>
+
+            <blockquote>“{suspect.quote}”</blockquote>
+          </section>
+        )}
+
         {suspect.playlistLink && (
-  <section className="playlist-feature">
-    <div className="playlist-feature__header">
-      <p className="eyebrow">Character Soundtrack</p>
-      <h4>{suspect.name}&apos;s Killer Playlist</h4>
-      <p>
-        {suspect.name}&apos;s top songs in {" "}
-        <em>A Killer Time</em>.
-      </p>
-    </div>
+          <section className="playlist-feature">
+            <div className="playlist-feature__header">
+              <p className="eyebrow">Character Soundtrack</p>
+              <h4>{suspect.name}&apos;s Killer Playlist</h4>
+              <p>
+                {suspect.name}&apos;s top songs in <em>A Killer Time</em>.
+              </p>
+            </div>
 
-    <iframe
-      className="spotify-player"
-      src={spotifyEmbedUrl}
-      title={`${suspect.name}'s Killer Playlist`}
-      loading="lazy"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    />
+            <iframe
+              className="spotify-player"
+              src={spotifyEmbedUrl}
+              title={`${suspect.name}'s Killer Playlist`}
+              loading="lazy"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            />
 
-    <a
-      className="button-link playlist-link"
-      href={suspect.playlistLink}
-      target="_blank"
-      rel="noreferrer"
-    >
-      OPEN IN SPOTIFY
-    </a>
-  </section>
+            <a
+              className="button-link playlist-link"
+              href={suspect.playlistLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              OPEN IN SPOTIFY
+            </a>
+          </section>
         )}
       </div>
     </article>
