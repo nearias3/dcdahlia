@@ -41,7 +41,7 @@ export default function Navbar() {
             About
           </NavLink>
           <NavLink to="/books" onClick={closeMenu}>
-            Books
+            Archive
           </NavLink>
           <NavLink to="/events" onClick={closeMenu}>
             Events

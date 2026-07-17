@@ -11,12 +11,12 @@ export default function Hero() {
           alt={`${site.author.name} logo`}
         />
 
-        <p className="eyebrow">Official Author Website</p>
+        <p className="eyebrow">Official Case Archive</p>
         <p className="hero-tagline">{site.author.tagline}</p>
 
         <div className="button-row">
           <Link className="button-link" to="/books">
-            Explore Books
+            Enter Archive
           </Link>
           <Link className="button-link" to="/contact">
             Join Newsletter

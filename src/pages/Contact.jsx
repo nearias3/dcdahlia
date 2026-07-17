@@ -46,7 +46,7 @@ export default function Contact() {
     return (
       <Container>
         <section className="page-header">
-          <p className="eyebrow">Contact</p>
+          <p className="eyebrow">Submit Correspondence</p>
           <h1>Contact the Lead Detective</h1>
           <p>Get in touch with D.C. Dahlia!</p>
         </section>
