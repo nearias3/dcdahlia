@@ -1840,10 +1840,11 @@ button:disabled {
 }
 
 .calendar-frame {
-  width: 100%;
   overflow: hidden;
-  border: 1px solid rgba(31, 31, 31, 0.14);
-  background: #fff;
+  border: 2px solid var(--color-red);
+  border-radius: var(--radius-md);
+  background: var(--color-paper-light);
+  box-shadow: var(--shadow-soft);
 }
 
 .calendar-embed {
@@ -2582,6 +2583,209 @@ html.theme-transition-to-noir .theme-toggle__icon {
   animation: flashlight-click 650ms ease;
 }
 
+/* =========================================================
+   INVESTIGATOR CALENDAR
+   ========================================================= */
+
+.investigator-calendar {
+  margin-top: 1.5rem;
+  color: var(--color-ink);
+}
+
+.investigator-calendar__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-bottom: 3px double var(--color-red);
+  background: var(--color-paper);
+}
+
+.investigator-calendar__label {
+  margin: 0 0 0.25rem;
+  color: var(--color-red-dark);
+  font-family: var(--font-typewriter);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.investigator-calendar__toolbar h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1;
+}
+
+.investigator-calendar__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.investigator-calendar__controls button {
+  min-width: 42px;
+  min-height: 40px;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--color-red);
+  background: var(--color-paper-light);
+  color: var(--color-red-dark);
+  font-family: var(--font-typewriter);
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    color 0.18s ease,
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+.investigator-calendar__controls button:hover {
+  color: var(--color-paper-light);
+  background: var(--color-red-dark);
+  transform: translateY(-1px);
+}
+
+.investigator-calendar__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-top: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12)),
+    var(--color-paper-dark);
+}
+
+.planner-sheet {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-paper-light);
+  box-shadow: 0 12px 24px rgba(31, 31, 31, 0.12);
+}
+
+.planner-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-bottom: 2px solid var(--color-red);
+  background: var(--color-ink);
+  color: var(--color-paper-light);
+}
+
+.planner-weekdays span {
+  padding: 0.7rem 0.25rem;
+  font-family: var(--font-typewriter);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.planner-day {
+  position: relative;
+  min-width: 0;
+  min-height: 105px;
+  padding: 0.5rem;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-paper-light);
+}
+
+.planner-day:nth-child(7n) {
+  border-right: 0;
+}
+
+.planner-day:nth-last-child(-n + 7) {
+  border-bottom: 0;
+}
+
+.planner-day--outside {
+  color: var(--color-muted);
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(31, 31, 31, 0.025),
+      rgba(31, 31, 31, 0.025) 4px,
+      transparent 4px,
+      transparent 8px
+    ),
+    var(--color-paper);
+}
+
+.planner-day__number {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  margin-left: auto;
+  font-family: var(--font-typewriter);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.planner-day--today .planner-day__number {
+  border-radius: 50%;
+  color: var(--color-paper-light);
+  background: var(--color-red-dark);
+  box-shadow: 0 2px 5px rgba(139, 30, 30, 0.25);
+}
+
+.planner-day__events {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.planner-event {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: 100%;
+  min-width: 0;
+  padding: 0.32rem 0.4rem;
+  border: 0;
+  border-left: 3px solid var(--color-red);
+  color: var(--color-red-dark);
+  background: rgba(178, 58, 58, 0.1);
+  font-family: var(--font-typewriter);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.planner-event span {
+  width: 5px;
+  height: 5px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--color-red);
+}
+
+.planner-event:hover {
+  color: var(--color-paper-light);
+  background: var(--color-red-dark);
+}
+
+.planner-day__more {
+  color: var(--color-muted);
+  font-family: var(--font-typewriter);
+  font-size: 0.66rem;
+}
+
 /* ========================================
    THEME-SAFE SURFACES
 ======================================== */
@@ -3205,3 +3409,40 @@ html.theme-transition-to-classic::after {
 }
 }
 
+* Responsive calendar */
+
+@media (max-width: 900px) {
+  .investigator-calendar__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-case-notes {
+    width: min(100%, 500px);
+    min-height: 240px;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .investigator-calendar__toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .investigator-calendar__layout {
+    padding: 0.75rem;
+  }
+
+  .planner-sheet {
+    overflow-x: auto;
+  }
+
+  .planner-weekdays,
+  .planner-grid {
+    min-width: 650px;
+  }
+
+  .planner-day {
+    min-height: 90px;
+  }
+}

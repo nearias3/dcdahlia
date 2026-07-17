@@ -1,8 +1,10 @@
 import site from "../data/site";
 import Container from "../components/ui/Container";
+import InvestigatorCalendar from "../components/events/InvestigatorCalendar";
 
 export default function Events() {
-  const calendarUrl = site.calendar?.embedUrl;
+  const calendarId = site.calendar?.calendarId;
+  const calendarTimeZone = site.calendar?.timeZone || "America/Los_Angeles";
   const upcomingEvents = site.events || [];
 
   return (
@@ -23,20 +25,14 @@ export default function Events() {
             <h2>Upcoming Events</h2>
           </div>
 
-          <p>
-            Select an event in the calendar to view its full details.
-          </p>
+          <p>Select an event in the calendar to view its full details.</p>
         </div>
 
-        {calendarUrl ? (
-          <div className="calendar-frame">
-            <iframe
-              className="calendar-embed"
-              src={calendarUrl}
-              title="D.C. Dahlia public events calendar"
-              loading="lazy"
-            />
-          </div>
+        {calendarId ? (
+          <InvestigatorCalendar
+            calendarId={calendarId}
+            timeZone={calendarTimeZone}
+          />
         ) : (
           <div className="calendar-placeholder">
             <div>
