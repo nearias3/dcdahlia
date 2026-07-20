@@ -3327,6 +3327,16 @@ html.theme-transition-to-classic::after {
   .newsletter-signup--compact .brevo-form {
     min-height: 500px;
   }
+
+  .investigator-calendar__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-case-notes {
+    width: min(100%, 500px);
+    min-height: 240px;
+    justify-self: center;
+  }
 }
 
 @media (max-width: 700px) {
